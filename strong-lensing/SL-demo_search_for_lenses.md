@@ -186,6 +186,8 @@ The image viewer interface is called "Firefly".
 
 It has a toolbar with functionality such as image scaling, recentering, line cut plots, and so on.
 
+The cutout functionality is still in development.
+
 Click on icons and try the tools.
 
 The button to restore defaults is under the wrench-and-hammer icon.

@@ -14,10 +14,10 @@ The [slide deck](https://docs.google.com/presentation/d/1PQHsFlBT_0JxSY-tRvI6BwC
 
 `SL-demo_search-for-lenses.md`
 
-* Run and ADQL query for bright red extended objects (potential lenses).
-* Investigate HiPS maps and select an object.
-* Retrieve deep coadd images of the selected object.
-* Navigate and explore deep coadd images.
+* Run an ADQL query for bright red extended objects (potential lenses).
+* Investigate HiPS maps and select a potential lens.
+* Retrieve deep coadd images of the potential lens.
+* Explore the deep coadd images.
 
 ### Jupyter Notebook tutorial
 
