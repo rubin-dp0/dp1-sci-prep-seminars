@@ -165,7 +165,7 @@ Figure 5: The ObsTAP interface set to search for deep coadd images of the select
 
 ### 3.4. View the object in the deep coadd image
 
-Six deep coadd images, one per LSST filters u, g, r, i, z, and y, are retrieved.
+Twelve deep coadd images, two per LSST filters u, g, r, i, z, and y, are retrieved because deeply coadded images overlap at the edges, and the object was in the overlap zone.
 
 The image that is selected in the table will display in the upper-left panel (the HiPS map is still there in the Coverage tab).
 
@@ -176,4 +176,18 @@ Zoom in on the object of interest.
 <img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
 
 Figure 6: The r-band deep coadd image, zoomed in on the object of interest.
+
+
+## 4. Exercises for the learner.
+
+Feel free to simply play around in the Portal.
+
+The image viewer interface is called "Firefly".
+
+It has a toolbar with functionality such as image scaling, recentering, line cut plots, and so on.
+
+Click on icons and try the tools.
+
+The button to restore defaults is under the wrench-and-hammer icon.
+
 
