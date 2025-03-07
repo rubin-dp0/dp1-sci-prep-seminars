@@ -1,4 +1,4 @@
-# Strong Lensing Demo: Searching for potential foreground lens galaxies
+# Searching for potential foreground lens galaxies
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -16,11 +16,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
-Strong lensing occurs when a foreground galaxy is aligned with a distant background galaxy.
+Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough, and 3) the lensing foreground galaxy is sufficiently massive.
 
-If the foreground galaxy has sufficient mass such that it perceptibly distorts the light from the background galaxy.
-
-The background galaxy may appear multiply-imaged, or as an arc or ring, instead of its true shape.
+The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
 
 In this case, the background galaxy is said to be "strongly lensed".
 
