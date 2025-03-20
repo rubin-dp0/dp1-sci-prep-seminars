@@ -2,7 +2,7 @@
 
 ## Hosts
 
-Andrés Plazas Malagón, Shenming Fu
+Andrés A. Plazas Malagón, Shenming Fu
 
 ## Slides
 
@@ -14,5 +14,5 @@ Andrés Plazas Malagón, Shenming Fu
 
 `science_seminars_dark_energy.ipynb`
 
-A combination of the tutorials on PSF and cluster lensing.
+A combination of the existing DP0.2 tutorials on Point Spread Function (tutorial DP02_NB 12b) and cluster lensing (tutorial DP02_16b).
 
