@@ -6,7 +6,7 @@ Christina Williams, Douglas Tucker
 
 ## Slides
 
-(link to be added here)
+[Link to slides](https://docs.google.com/presentation/d/1ttMEleFFJDg0g3aKd9ulqbOhGNkg18hYelinvxTJR8s/edit?usp=sharing)
 
 ## Tutorial
 
