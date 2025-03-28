@@ -1,12 +1,12 @@
-# Searching for potential foreground lens galaxies
+# Extracting a light curve of a vafriable object 
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0
 
-**Last verified to run:** 2025-03-03
+**Last verified to run:** 2025-03-30
 
-**Learning objective:** Use the ADQL interface to query for bright red extended objects that might be potential foreground lenses. Investigate the r-band `deepCoadd` image of a galaxy.
+**Learning objective:** Use the ADQL interface to extract multi-band photometry of a varible object
 
 **LSST data products:** `Object` catalog, `deepCoadd` image
 
