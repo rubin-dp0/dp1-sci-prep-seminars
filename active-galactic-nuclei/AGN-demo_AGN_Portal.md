@@ -1,4 +1,4 @@
-# Extracting a light curve of a vafriable object 
+# Extracting a light curve of a variable object 
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -16,7 +16,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
-Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
+AGN are...
 
 The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
 
