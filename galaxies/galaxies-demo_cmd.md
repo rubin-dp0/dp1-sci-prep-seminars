@@ -1,12 +1,12 @@
-# Searching for potential foreground lens galaxies
+# Comparing the Color-Magnitude Diagram of a set of Field Galaxies with that of a Cluster of Galaxies (Seeing the Red Sequence)
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0
 
-**Last verified to run:** 2025-03-03
+**Last verified to run:** 2025-04-01
 
-**Learning objective:** Use the ADQL interface to query for bright red extended objects that might be potential foreground lenses. Investigate the r-band `deepCoadd` image of a galaxy.
+**Learning objective:** Use the ADQL interface to compare the color-magnitude diagram of a set of field galaxies with that of a galaxy cluster. Investigate the r-band `deepCoadd` image of a galaxy cluster.
 
 **LSST data products:** `Object` catalog, `deepCoadd` image
 
@@ -15,6 +15,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 ## Introduction
+
+***UPDATE THIS SECTION!***
 
 Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
 
@@ -29,6 +31,8 @@ Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (
 
 **Data Preview 0.2 vs. Data Preview 1**
 
+***UPDATE THIS SECTION!***
+
 In the Data Preview 0.2 (DP0.2) simulation there are no strongly-lensed objects, like there will be in the real data released as Data Preview 1 (DP1).
 None of the "potential foreground lens" galaxies explored in this tutorial will have any lensed objects nearby.
 Furthermore, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
@@ -37,7 +41,7 @@ The LSST Science Pipelines have evolved considerably since being run on the DP0.
 **This is not an introductory-level tutorial!**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
-**Related tutorials relevant to strong lensing science.**
+**Related tutorials relevant to galaxy science.**
 See also the DP0.2 portal tutorials on exploring extended object populations, and the SAOImage DS9-like functionalities of Firefly.
 
 ## 1. Execute the ADQL query.
@@ -65,45 +69,55 @@ Copy and paste the following into the ADQL Query box.
 At lower left, click the blue "Search" button.
 
 ~~~~mysql    
-SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62.3, -38.4, 1))=1
-    AND (detect_isPrimary =1 AND refExtendedness =1
-      AND r_cModelFlux <575000 AND r_cModelFlux >91000
-      AND g_cModelFlux >36000 AND i_cModelFlux <575000
-      AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
+SELECT obj.objectId, obj.coord_ra, obj.coord_dec, 
+	   obj.g_cModelFlux, obj.r_cModelFlux, obj.i_cModelFlux, 
+	   obj.g_cModelFluxErr, obj.r_cModelFluxErr, obj.i_cModelFluxErr, 
+	   -2.5*log10(obj.g_cModelFlux)+31.4 as g_mag, 
+	   -2.5*log10(obj.r_cModelFlux)+31.4 as r_mag, 
+	   -2.5*log10(obj.i_cModelFlux)+31.4 as i_mag,
+	   1.086*(obj.g_cModelFluxErr/obj.g_cModelFlux) as g_magerr, 
+	   1.086*(obj.r_cModelFluxErr/obj.r_cModelFlux) as r_magerr, 
+	   1.086*(obj.i_cModelFluxErr/obj.i_cModelFlux) as i_magerr
+FROM dp02_dc2_catalogs.Object AS obj 
+WHERE (obj.detect_isPrimary = 1) AND (obj.refExtendedness = 1) AND 
+	  (obj.g_cModelFlux > 0) AND (obj.r_cModelFlux > 0) AND (obj.i_cModelFlux > 0) AND 
+	  (obj.i_cModelFlux/obj.i_cModelFluxErr > 20) AND 
+	  CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
+             CIRCLE('ICRS',56.7506834813934,-31.28892993702273, 0.1)) = 1
 ~~~~
 
 **About the query.**
 
-The query selects 6 columns to be returned from the DP0.2 `Object` table.
+The query selects 15 columns to be returned from the DP0.2 `Object` table.
 
 * an object identifier (integer)
 * the coordinates right ascension and declination
 * object flux measurements in the g, r, and i filters
+* object flux error measurement in the g, r, and i filters
+* object magnitude measurements (corresponding the object flux measurements) in the g, r, and i filters
+* object magnitude error measurements (corresponding the object flux error measurements) in the g, r, and i filters
 
 The query constrains the results to only include rows (objects) that are:
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
+* in the search area (within a 0.1 degree radius of RA, Dec = 56.7506834813934 deg, -31.28892993702273 deg)
 * not a duplicate or parent object (`detect_isPrimary` = 1)
 * an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+* non-zero flux in the g, r, and i bands (gaapOptimalFlux $>$ 0)
+* high signal-to-noise in the i band (i_gaapOptimalFlux/i_gaapOptimalFluxErr $>$ 20)
 
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
-* `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
+* `Object` table fluxes are in nJy and are converted to AB magnitue via the equation $m = -2.5\log(f) + 31.4$.
 * The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
 or `cModel` fluxes are used.
+
 
 ## 2. Choose an extended object.
 
 ### 2.1. Confirm the results view.
 
-The query should have returned 1004 objects.
+The query should have returned 3154 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
