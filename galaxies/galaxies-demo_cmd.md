@@ -62,7 +62,7 @@ At upper right, click the toggle to "Edit ADQL".
 
 For comparison with the cluster field, first examine a random field.
 
-The following steps will examine a random field 10 degrees away from of a known cluster in DP0.2.
+The following steps will examine a random field 10 degrees away from a known simulated cluster in DP0.2.
 
 ### 3.1 Execute the ADQL query.
 
@@ -84,7 +84,7 @@ At lower left, click the blue "Search" button.
 
 **About the query.**
 
-The query returns 5 columns from the DP0.2 `Object` table.  Some of these columns come directly from the `Object` table, and some are derived from the ]one or more columns from the `Object` table. 
+The query returns 5 columns from the DP0.2 `Object` table.  Some of these columns come directly from the `Object` table, and some are derived from one or more columns from the `Object` table. 
 
 * an object identifier (integer)
 * the coordinates right ascension and declination
@@ -115,7 +115,7 @@ The results view should appear similar to the figure below (panel size ratios or
 
 <img src="images/screenshot_1.png" alt="Default results view." width="400"/>
 
-Figure 1: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+Figure 2: The default results view after running the query. At upper left, there is a panel for submitting a search on ForcedSource time series, but one can switch to the Coverage tab in that panel to see the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map. At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
 
 ### 3.3. Plot the color-magnitude diagram.
@@ -135,8 +135,16 @@ Under **Chart Options**:
   
 Click the blue "Apply" button.
 
+<img src="images/screenshot_2.png" alt="Default results view." width="400"/>
+
+Figure 3: The Plot Parameters window filled out as described above.
+
+
 ### 3.4. Examine the color-magnitude diagram.
 
+<img src="images/screenshot_3.png" alt="Default results view." width="400"/>
+
+Figure 4: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.
 
 ## 4. Study the color-magnitude diagram for the galaxy cluster field.
 
@@ -179,9 +187,9 @@ The query should have returned 3439 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_4.png" alt="Default results view." width="400"/>
 
-Figure 1: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+Figure 5: The default results view after running the query. This should be identical to the view from Figure 2, except this plot is for an area centered on a rich galaxy cluster.
 
 
 ### 4.3. Plot the color-magnitude diagram.
@@ -201,11 +209,23 @@ Under **Chart Options**:
   
 Click the blue "Apply" button.
 
+<img src="images/screenshot_5.png" alt="Default results view." width="400"/>
 
+Figure 6: The Plot Parameters window filled out as described above.  It is nearly identical to Figure 3.
 
+### 4.4. Examine the color-magnitude diagram.
 
+<img src="images/screenshot_6.png" alt="Default results view." width="400"/>
 
-## 5. Exercises for the learner.
+Figure 7: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.  This should be identical to the view from Figure 4, except these data are from an area centered on a rich galaxy cluster.
+
+## 5. Examine the HiPS image of the cluster.
+
+<img src="images/screenshot_7.png" alt="Default results view." width="400"/>
+
+Figure 8: XXXXX
+
+## 6. Exercises for the learner.
 
 Feel free to simply play around in the Portal.
 
