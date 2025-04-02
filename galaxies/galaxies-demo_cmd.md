@@ -24,21 +24,19 @@ The foreground galaxy perceptibly distorts the light from the background galaxy,
 
 In this case, the background galaxy is said to be "strongly lensed".
 
-<img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
+<img src="images/noirlab2501a.jpg" alt="color image of the Antlia cluster of galaxies." width="400"/>
 
-Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (pink) due to the mass of a foreground galaxy (blue) from Earth's perspective (right side), and appears as a strongly-lensed object in an image (left side).
+Figure 1: A color image of the Antlia cluster of galaxies (Abell S636). 
+*(Credit:  Dark Energy Survey/DOE/FNAL/DECam/CTIO/NOIRLab/NSF/AURA* 
+*Image processing: R. Colombari & M. Zamani (NSF NOIRLab))*
 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
-***UPDATE THIS SECTION!***
+Note: for Data Preview 1 (DP1) the exact types of measurements and their column names are likely to have changed relative to DP0.
+as the LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
-In the Data Preview 0.2 (DP0.2) simulation there are no strongly-lensed objects, like there will be in the real data released as Data Preview 1 (DP1).
-None of the "potential foreground lens" galaxies explored in this tutorial will have any lensed objects nearby.
-Furthermore, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
-The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
-
-**This is not an introductory-level tutorial!**
+**Other tutorials describing the Portal**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to galaxy science.**
