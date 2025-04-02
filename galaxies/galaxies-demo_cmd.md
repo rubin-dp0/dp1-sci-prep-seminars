@@ -112,7 +112,7 @@ The query should have returned 2960 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_1.png" alt="Default results view." width="800"/>
+<img src="images/screenshot_1.png" alt="Default results view for field galaxy sample" width="800"/>
 
 Figure 2: The default results view after running the query. At upper left, there is a panel for submitting a search on ForcedSource time series, but one can switch to the Coverage tab in that panel to see the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map. At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
@@ -134,14 +134,14 @@ Under **Chart Options**:
   
 Click the blue "Apply" button.
 
-<img src="images/screenshot_2.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_2.png" alt="Plot Parameters window." width="400"/>
 
 Figure 3: The Plot Parameters window filled out as described above.
 
 
 ### 3.4. Examine the color-magnitude diagram.
 
-<img src="images/screenshot_3.png" alt="Default results view." width="800"/>
+<img src="images/screenshot_3.png" alt="Results view with color-magnitude diagram for field galaxies." width="800"/>
 
 Figure 4: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.
 
@@ -186,7 +186,7 @@ The query should have returned 3439 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_4.png" alt="Default results view." width="800"/>
+<img src="images/screenshot_4.png" alt="Default results view for cluster galaxies query." width="800"/>
 
 Figure 5: The default results view after running the query. This should be identical to the view from Figure 2, except this plot is for an area centered on a rich galaxy cluster.
 
@@ -208,21 +208,21 @@ Under **Chart Options**:
   
 Click the blue "Apply" button.
 
-<img src="images/screenshot_5.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_5.png" alt="Plot Parameters window." width="400"/>
 
 Figure 6: The Plot Parameters window filled out as described above.  It is nearly identical to Figure 3.
 
 ### 4.4. Examine the color-magnitude diagram.
 
-<img src="images/screenshot_6.png" alt="Default results view." width="800"/>
+<img src="images/screenshot_6.png" alt="Results view with color-magnitude diagram for cluster galaxies." width="800"/>
 
 Figure 7: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.  This should be identical to the view from Figure 4, except these data are from an area centered on a rich galaxy cluster.
 
 ## 5. Examine the HiPS image of the cluster.
 
-<img src="images/screenshot_7.png" alt="Default results view." width="800"/>
+<img src="images/screenshot_7.png" alt="Results view showing the HiPS image of the cluster." width="800"/>
 
-Figure 8: XXXXX
+Figure 8: The resulting view showing the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map zoomed in onto the cluster of galaxies.
 
 ## 6. Exercises for the learner.
 
