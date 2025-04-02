@@ -22,7 +22,7 @@ Rich clusters of galaxies are composed a mostly of elliptical galaxies, which al
 
 This provides a means of identifying distance rich clusters of galaxies by searching for galaxies of the same apparent color that lie close to each other on the sky without needing to measure the individual galaxies' spectrocopic redshifts.  This is the essence of the red-sequence method of cluster finding.
 
-<img src="images/noirlab2306a.jpg" alt="color image of the Antlia cluster of galaxies." width="400"/>
+<img src="images/noirlab2306a.jpg" alt="color image of the Abell 3158 cluster of galaxies." width="800"/>
 
 Figure 1: A color image of the Abell 3158 cluster of galaxies. 
 *(Credit:  LoVoCCS/DESI Legacy Imaging Survey/KPNO/NOIRLab/NSF/AURA; Image processing: T.A. Rector (University of Alaska Anchorage/NSF NOIRLab, Jen Miller, M. Zamani & D. de Martin (NSF NOIRLab))*
@@ -104,7 +104,7 @@ Details about the object flux measurements:
 * `Object` table fluxes are in nJy and are converted to AB magnitude via the equation $m = -2.5\log(f) + 31.4$.
 * The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
 or `cModel` fluxes, which are a measure of total flux for extended objects, are used for the $i$-band magnitudes.
-* The optimal-aperture Gaussian-aperture-and-PSF ([Kuijken et al. 2008](https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract) or `gaapOptimal` fluxes, which are preferred for the colors of extended objects, are used for the $(g-i)$ colors.
+* The optimal-aperture Gaussian-aperture-and-PSF ([Kuijken et al. 2008](https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract)) or `gaapOptimal` fluxes, which are preferred for the colors of extended objects, are used for the $(g-i)$ colors.
 
 ### 3.2. Confirm the results view.
 
@@ -112,7 +112,7 @@ The query should have returned 2960 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_1.png" alt="Default results view." width="800"/>
 
 Figure 2: The default results view after running the query. At upper left, there is a panel for submitting a search on ForcedSource time series, but one can switch to the Coverage tab in that panel to see the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map. At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
@@ -141,7 +141,7 @@ Figure 3: The Plot Parameters window filled out as described above.
 
 ### 3.4. Examine the color-magnitude diagram.
 
-<img src="images/screenshot_3.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_3.png" alt="Default results view." width="800"/>
 
 Figure 4: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.
 
@@ -186,7 +186,7 @@ The query should have returned 3439 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_4.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_4.png" alt="Default results view." width="800"/>
 
 Figure 5: The default results view after running the query. This should be identical to the view from Figure 2, except this plot is for an area centered on a rich galaxy cluster.
 
@@ -214,13 +214,13 @@ Figure 6: The Plot Parameters window filled out as described above.  It is nearl
 
 ### 4.4. Examine the color-magnitude diagram.
 
-<img src="images/screenshot_6.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_6.png" alt="Default results view." width="800"/>
 
 Figure 7: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.  This should be identical to the view from Figure 4, except these data are from an area centered on a rich galaxy cluster.
 
 ## 5. Examine the HiPS image of the cluster.
 
-<img src="images/screenshot_7.png" alt="Default results view." width="400"/>
+<img src="images/screenshot_7.png" alt="Default results view." width="800"/>
 
 Figure 8: XXXXX
 
