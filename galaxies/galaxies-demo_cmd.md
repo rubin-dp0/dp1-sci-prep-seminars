@@ -1,6 +1,6 @@
 # Comparing the Color-Magnitude Diagram of a set of Field Galaxies with that of a Cluster of Galaxies (Seeing the Red Sequence)
 
-For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
+For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud. 
 
 **Data Release:** DP0
 
