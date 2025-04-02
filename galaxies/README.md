@@ -16,7 +16,7 @@ Christina Williams, Douglas Tucker
 
 * Query the butler for `deepCoadd` images.
 * Query the TAP services for `objectTable` catalog data.
-* Understand flux measurements relevant to galaxies science.
+* Understand flux and shape measurements relevant to galaxies science.
 
 ### Portal tutorial
 
