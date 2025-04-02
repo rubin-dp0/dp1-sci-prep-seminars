@@ -10,16 +10,13 @@ Christina Williams, Douglas Tucker
 
 ## Tutorial
 
-(brief descriptions of the directory contents here)
-
 ### Jupyter Notebook tutorial
 
 `galaxies-demo_images-and-photometry.ipynb`
 
-* ...
-* ...
+* Query the butler for `deepCoadd` images.
+* Query the TAP services for `objectTable` catalog data.
 * Understand flux measurements relevant to galaxies science.
-* Understand deblending concepts of parents and children.
 
 ### Portal tutorial
 
