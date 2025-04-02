@@ -141,6 +141,10 @@ Figure 3: The Plot Parameters window filled out as described above.
 
 ### 3.4. Examine the color-magnitude diagram.
 
+The $(g-i)$ vs. $i$ color-magnitude diagram for a random set of field galaxies can now be found in the Active Chart window.
+
+This will be the basis of comparison for the $(g-i)$ vs. $i$ color-magnitude diagram for galaxies in a rich cluster that will be shown later in this tutorial.
+
 <img src="images/screenshot_3.png" alt="Results view with color-magnitude diagram for field galaxies." width="800"/>
 
 Figure 4: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.
@@ -214,11 +218,27 @@ Figure 6: The Plot Parameters window filled out as described above.  It is nearl
 
 ### 4.4. Examine the color-magnitude diagram.
 
+The $(g-i)$ vs. $i$ color-magnitude diagram for galaxies in a rich cluster can now be found in the Active Chart window.
+
+Compare this color-magnitude diagram with that shown above for a set of random field galaxies.
+
+Note that there is a distinct locus of galaxies with a $(g-i) \sim 1.5$.  These are the galaxies in the rich cluster targeted in the above rich cluster ADQL query.  This is the so-called "red sequence" for this rich cluster of galaxies.
+
 <img src="images/screenshot_6.png" alt="Results view with color-magnitude diagram for cluster galaxies." width="800"/>
 
 Figure 7: The resulting view after applying the plot updates. Note that the Active Chart now contains the $g-i$ vs. $i$ color-magnitude diagram for extended objects in a random field of DP0.2.  The object in the highlighted row in the table in the bottom panel is indicated by the orange symbol in the Active Chart plot.  This should be identical to the view from Figure 4, except these data are from an area centered on a rich galaxy cluster.
 
 ## 5. Examine the HiPS image of the cluster.
+
+In the Active Chart panel, click on a galaxy in the cluster's red sequence.
+
+In the upper left panel of the Portal, click on "Coverage" to access the HiPS coverage map.
+
+Click on the HiPS coverage map.
+
+Either using a scrollbar or the magifying glass with a + sign symbol in the top right of the HiPS coverage map, zoom in to see the rich cluster of galaxies.
+
+The cluster should appear as in Figure 8.  The green crosshairs symbol indicates the center RA, Dec of the ADQL query.  The orange crossed box indicates the galaxy selected in the Active Chart panel.
 
 <img src="images/screenshot_7.png" alt="Results view showing the HiPS image of the cluster." width="800"/>
 
