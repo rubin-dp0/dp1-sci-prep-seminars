@@ -16,19 +16,16 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
-***UPDATE THIS SECTION!***
+The field population of galaxies contains a heterogeneous mixture of galaxies type -- including spiral galaxies, irregular galaxies, and elliptical galaxies.
 
-Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
+Rich clusters of galaxies are composed a mostly of elliptical galaxies, which all have very similar rest-frame spectral energy distributions.  As a result, galaxies in a rich cluster tend to have mostly the same color, and their apparent color depends on redshift:  galaxies in more distant rich clusters all appear redder than galaxies in nearby rich clusters.  
 
-The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
+This provides a means of identifying distance rich clusters of galaxies by searching for galaxies of the same apparent color that lie close to each other on the sky without needing to measure the individual galaxies' spectrocopic redshifts.  This is the essence of the red-sequence method of cluster finding.
 
-In this case, the background galaxy is said to be "strongly lensed".
+<img src="images/noirlab2306a.jpg" alt="color image of the Antlia cluster of galaxies." width="400"/>
 
-<img src="images/noirlab2501a.jpg" alt="color image of the Antlia cluster of galaxies." width="400"/>
-
-Figure 1: A color image of the Antlia cluster of galaxies (Abell S636). 
-*(Credit:  Dark Energy Survey/DOE/FNAL/DECam/CTIO/NOIRLab/NSF/AURA* 
-*Image processing: R. Colombari & M. Zamani (NSF NOIRLab))*
+Figure 1: A color image of the Abell 3158 cluster of galaxies. 
+*(Credit:  LoVoCCS/DESI Legacy Imaging Survey/KPNO/NOIRLab/NSF/AURA; Image processing: T.A. Rector (University of Alaska Anchorage/NSF NOIRLab, Jen Miller, M. Zamani & D. de Martin (NSF NOIRLab))*
 
 
 **Data Preview 0.2 vs. Data Preview 1**
@@ -37,9 +34,11 @@ Note: for Data Preview 1 (DP1) the exact types of measurements and their column 
 as the LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
 **Other tutorials describing the Portal**
+
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to galaxy science.**
+
 See also the DP0.2 portal tutorials on exploring extended object populations, and the SAOImage DS9-like functionalities of Firefly.
 
 ## 1. Log in to the RSP Portal.
