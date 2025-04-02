@@ -4,7 +4,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0
 
-**Last verified to run:** 2025-04-01
+**Last verified to run:** 2025-04-02
 
 **Learning objective:** Use the ADQL interface to compare the color-magnitude diagram of a set of field galaxies with that of a galaxy cluster. Investigate the r-band `deepCoadd` image of a galaxy cluster.
 
@@ -64,13 +64,11 @@ At upper right, click the toggle to "Edit ADQL".
 
 For comparison with the cluster field, first examine a random field.
 
-The following steps will examine a random field about 1.3 degrees away from a known cluster in DP0.2.
+The following steps will examine a random field 10 degrees away from of a known cluster in DP0.2.
 
 ### 3.1 Execute the ADQL query.
 
 Copy and paste the following into the ADQL Query box.
-
-At lower left, click the blue "Search" button.
 
 ~~~~mysql    
 SELECT obj.objectId, obj.coord_ra, obj.coord_dec, 
@@ -81,8 +79,10 @@ WHERE (obj.detect_isPrimary = 1) AND (obj.refExtendedness = 1) AND
 	  (obj.i_cModelFlux/obj.i_cModelFluxErr > 20) AND 
 	  (obj.g_cModelFlux > 0) AND (obj.i_cModelFlux > 0) AND 
 	  CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec), 
-	          CIRCLE('ICRS',55.75,-32.29, 0.1)) = 1
+	          CIRCLE('ICRS',55.75,-42.29, 0.1)) = 1
 ~~~~
+
+At lower left, click the blue "Search" button.
 
 **About the query.**
 
@@ -104,14 +104,14 @@ The query constrains the results to only include rows (objects) that are:
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
-* `Object` table fluxes are in nJy and are converted to AB magnitue via the equation $m = -2.5\log(f) + 31.4$.
+* `Object` table fluxes are in nJy and are converted to AB magnitude via the equation $m = -2.5\log(f) + 31.4$.
 * The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
 or `cModel` fluxes, which are a measure of total flux for extended objects, are used for the $i$-band magnitudes.
 * The optimal-aperture Gaussian-aperture-and-PSF ([Kuijken et al. 2008](https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract) or `gaapOptimal` fluxes, which are preferred for the colors of extended objects, are used for the $(g-i)$ colors.
 
 ### 3.2. Confirm the results view.
 
-The query should have returned 3158 objects.
+The query should have returned 2960 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
@@ -122,6 +122,22 @@ Figure 1: The default results view after running the query. At upper left, the [
 
 ### 3.3. Plot the color-magnitude diagram.
 
+Click on the gear symbol in the upper left of the Active Chart panel.
+
+Select `i_mag_cmodel` for the `X` coordinate.
+
+Select `gi_color_gap` for the `Y` coordinate.
+
+Under **Chart Options**:
+* Paste "CMD:  Random Field" into the Chart title field.
+* Change the X Label to "i_cmodel".
+* Change the Y Label to "(g-i)_gaap".
+* Set the plot boundaries to X Min = 16.0, X Max = 25.0, Y Min = -2.0, Y Max = 4.0.
+* Check the grid option for both the X and the Y axis.
+  
+Click the blue "Apply" button.
+
+### 3.4. Examine the color-magnitude diagram.
 
 
 ## 4. Study the color-magnitude diagram for the galaxy cluster field.
@@ -132,9 +148,13 @@ The following steps will examine a known galaxy cluster in DP0.2 centered at RA,
 
 ### 4.1 Execute the ADQL query.
 
-Copy and paste the following into the ADQL Query box.
+Click on the "DP0.2 Catalogs" tab at the top of the Portal window.
 
-At lower left, click the blue "Search" button.
+If not presented with the AQDL Query page of the Portal after clicking on the "DP0.2 Catalogs" tab, click the toggle to "Edit ADQL" at the upper right.
+
+Clear the previous query from the ADQL Query box by clicking on the "Clear" button at the top of the page.
+
+Copy and paste the following into the ADQL Query box.
 
 ~~~~mysql    
 SELECT obj.objectId, obj.coord_ra, obj.coord_dec, 
@@ -147,6 +167,9 @@ WHERE (obj.detect_isPrimary = 1) AND (obj.refExtendedness = 1) AND
 	  CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec), 
 	          CIRCLE('ICRS',55.75,-32.29, 0.1)) = 1
 ~~~~
+
+At lower left, click the blue "Search" button.
+
 
 **About the query.**
 
@@ -165,7 +188,20 @@ Figure 1: The default results view after running the query. At upper left, the [
 
 ### 4.3. Plot the color-magnitude diagram.
 
+Click on the gear symbol in the upper left of the Active Chart panel.
 
+Select `i_mag_cmodel` for the `X` coordinate.
+
+Select `gi_color_gap` for the `Y` coordinate.
+
+Under **Chart Options**:
+* Paste "CMD:  Cluster Field" into the Chart title field.
+* Change the X Label to "i_cmodel".
+* Change the Y Label to "(g-i)_gaap".
+* Set the plot boundaries to X Min = 16.0, X Max = 25.0, Y Min = -2.0, Y Max = 4.0.
+* Check the grid option for both the X and the Y axis.
+  
+Click the blue "Apply" button.
 
 
 
