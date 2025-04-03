@@ -16,11 +16,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
-AGN are...
-
-The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
-
-In this case, the background galaxy is said to be "strongly lensed".
+AGN are luminous point-like sources present in centers of many galaxies, and often are much brighter than the host galaxy.  
+Those are characterized by a distinct spectrum - usually are bluer than the stars in the host galaxy, and exhibit prominent emission lines.  
+Their broad-band spectra lften extend from the radio regime to X-ray and even gamma-ray bands.  
+AGN often vary in all observable spectral bands on a wide range of time scales.  
+The current widely accepted model of an AGN is that the source of power is the accretion of galaxian matter onto the central black hole, releasing its gravitational energy into heat.  
 
 <img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
 
@@ -29,7 +29,7 @@ Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (
 
 **Data Preview 0.2 vs. Data Preview 1**
 
-In the Data Preview 0.2 (DP0.2) simulation there are no strongly-lensed objects, like there will be in the real data released as Data Preview 1 (DP1).
+In the Data Preview 0.2 (DP0.2) simulation there are no AGN, but very likely there will be AGN in the real data released as Data Preview 1 (DP1).
 None of the "potential foreground lens" galaxies explored in this tutorial will have any lensed objects nearby.
 Furthermore, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
