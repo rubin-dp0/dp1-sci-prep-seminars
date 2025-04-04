@@ -38,7 +38,9 @@ Furthermore, for DP1 the exact types of measurements and their column names are 
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
 Here, you will learn how to plot the light curve of a difference image analysis object (diaObject).
-In this demonstration, an RR Lyrae star is used. This star has coordinates RA, Dec = 62.1479031, -35.7991348 deg.  and an object identifier number diaObjectId = 1651589610221862935. As is appropriate for variable stars, the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
+In this demonstration, an RR Lyrae star is used. This star has coordinates RA, Dec = 62.1479031, -35.7991348 deg.
+This object has an identifier number diaObjectId = 1651589610221862935.
+As is appropriate for steady variable objects (rather than transients such as a supernova), the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
 
 **This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
