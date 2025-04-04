@@ -1,4 +1,4 @@
-# Searching for potential foreground lens galaxies
+# Stars and Milky Way CMD and LC Demo
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -6,9 +6,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-03-03
 
-**Learning objective:** Use the ADQL interface to query for bright red extended objects that might be potential foreground lenses. Investigate the r-band `deepCoadd` image of a galaxy.
+**Learning objective:** Use the ADQL interface to query for stars, generate a Color Magnitude Diagram and a Light Curve.
 
-**LSST data products:** `Object` catalog, `deepCoadd` image
+**LSST data products:** `Object` catalog, `deepCoadd` image - UPDATE
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
@@ -16,7 +16,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
-Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
+UPDATE Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
 
 The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
 
