@@ -1,4 +1,4 @@
-# Extracting a light curve of a variable object 
+# Studying active galactic nuclei:  extracting a light curve of a variable object and extracting an image of a host galaxy
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -12,15 +12,17 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
-AGN are luminous point-like sources present in centers of many galaxies, and often are much brighter than the host galaxy.  
-Those are characterized by a distinct spectrum - usually are bluer than the stars in the host galaxy, and exhibit prominent emission lines.  
-Their broad-band spectra lften extend from the radio regime to X-ray and even gamma-ray bands.  
-AGN often vary in all observable spectral bands on a wide range of time scales.  
-The current widely accepted model of an AGN is that the source of power is the accretion of galaxian matter onto the central black hole, releasing its gravitational energy into heat.  
+AGN are luminous point-like sources present in centers of many galaxies, and often are much brighter than the host galaxy.
+Those are characterized by a distinct spectrum - usually are bluer than the stars in the host galaxy, and exhibit prominent emission lines.
+Their broad-band spectra often extend from the radio regime to X-ray and even gamma-ray bands.
+AGN often vary in all observable spectral bands on a wide range of time scales.
+This implies a very compact source, typically smaller than a light-year.
+The current widely accepted model of an AGN is that the source of power is the accretion of galaxian matter onto the central black hole, releasing its gravitational energy into heat.
 
 <img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
 
@@ -30,11 +32,14 @@ Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (
 **Data Preview 0.2 vs. Data Preview 1**
 
 In the Data Preview 0.2 (DP0.2) simulation there are no AGN, but very likely there will be AGN in the real data released as Data Preview 1 (DP1).
-None of the "potential foreground lens" galaxies explored in this tutorial will have any lensed objects nearby.
+However, the DP0.2 contains variable stars and we will pretend one such star is an AGN.
 Furthermore, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
-**This is not an introductory-level tutorial!**
+Here, you will learn how to plot the light curve of a difference image analysis object (diaObject).
+In this demonstration, an RR Lyrae star is used. This star has coordinates RA, Dec = 62.1479031, -35.7991348 deg.  and an object identifier number diaObjectId = 1651589610221862935. As is appropriate for variable stars, the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
+
+**This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to strong lensing science.**
