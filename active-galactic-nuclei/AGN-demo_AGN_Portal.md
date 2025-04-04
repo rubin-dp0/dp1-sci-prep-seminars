@@ -120,22 +120,18 @@ Note that the photometric measurements are stored as fluxes in the tables, not m
 **2. The default plot is an all-filter light curve.**
 The first two columns, date and flux, are plotted on the x- and y-axes of the default Active Chart for all filters (Figure 1).
 
-.. figure:: /_static/portal-howto-lightcurves-1.png
-    :name: portal-howto-lightcurves-1
-    :alt: A screenshot of the default results view showing the light curve from all filters.
+<img src="images/AGN_Lightcurve_3.png" alt="AGN Lightcurve 3" width="400"/>
 
-    Figure 1: The default results view showing the light curve with all filters as blue points.
+Figure 3: The light curve of the selected variable object, measured in all bands.
 
 
 **3. Plot a single-filter light curve.**
 In the table header, in the "band" column, click on the constraint box and then select "i" in the pop-up window and click "Apply".
 The plot will update to display i-band fluxes only (Figure 2).
 
-.. figure:: /_static/portal-howto-lightcurves-2.png
-    :name: portal-howto-lightcurves-2
-    :alt: A screenshot of the results view with only i-band data selected.
+<img src="images/AGN_Lightcurve_4.png" alt="AGN Lightcurve 4." width="400"/>
 
-    Figure 2: The results view with only i-band data selected and plotted.
+Figure 4: The light curve of the selected variable object, with only i-band data selected and plotted.
 
 
 **4. Color markers by band in a multi-band light curve.**
@@ -144,19 +140,14 @@ create a new column in which the band is represented as a number (Figure 3)
 and then a color map based on those numbers (Figure 4).
 The plot will then display points colored by band (Figure 5).
 
-.. figure:: /_static/portal-howto-lightcurves-3.png
-    :name: portal-howto-lightcurves-3
-    :alt: A screenshot of the "Add a column" pop-up window.
 
-    Figure 3: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
+<img src="images/AGN_Lightcurve_5.png" alt="AGN Lightcurve 5." width="400"/>
 
+Figure 5: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
 
-.. figure:: /_static/portal-howto-lightcurves-4.png
-    :name: portal-howto-lightcurves-4
-    :width: 400
-    :alt: A screenshot of the "Plot Parameters" pop-up window.
+<img src="images/AGN_Lightcurve_6.png" alt="AGN Lightcurve 6." width="400"/>
 
-    Figure 4: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
+Figure 5: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
 
 
 .. figure:: /_static/portal-howto-lightcurves-5.png
