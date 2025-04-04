@@ -69,7 +69,7 @@ Under "Enter Constraints" uncheck "temporal" and check "spatial" box.
 Enter the coordinates of the object of interest - 62.1479031, -35.7991348 and 3 arc sec as the radius.
 Click "Search" - the resulting table on the bottom will show that the ``diaObjectId`` with the largest number of sources (366) is indeed 1651589610221862935.
 
-<img src="images/GettingdiaOjectId.png" alt="diaObjectId." width="400"/>
+<img src="images/diaOjectId.png" alt="diaObjectId." width="400"/>
 
 Figure 2: the Portal UI interface ready to retrieve the ``diaObjectId``.
 
