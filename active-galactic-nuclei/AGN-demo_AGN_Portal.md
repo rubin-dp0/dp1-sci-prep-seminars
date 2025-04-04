@@ -136,10 +136,9 @@ Figure 4: The light curve of the selected variable object, with only i-band data
 
 **4. Color markers by band in a multi-band light curve.**
 To set marker color based on band (filter),
-create a new column in which the band is represented as a number (Figure 3)
-and then a color map based on those numbers (Figure 4).
-The plot will then display points colored by band (Figure 5).
-
+create a new column in which the band is represented as a number (Figure 5)
+and then a color map based on those numbers (Figure 6).
+The plot will then display points colored by band (Figure 57.
 
 <img src="images/AGN_Lightcurve_5.png" alt="AGN Lightcurve 5." width="400"/>
 
@@ -147,111 +146,14 @@ Figure 5: The "Add a column" pop-up window to create a new column of integer num
 
 <img src="images/AGN_Lightcurve_6.png" alt="AGN Lightcurve 6." width="400"/>
 
-Figure 5: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
+Figure 6: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
 
+<img src="images/AGN_Lightcurve_7.png" alt="AGN Lightcurve 7." width="400"/>
 
-.. figure:: /_static/portal-howto-lightcurves-5.png
-    :name: portal-howto-lightcurves-5
-    :alt: A screenshot of the results view with plotted points colored by band.
-
-    Figure 5: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
+Figure 7: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
 
 
 **Notice:**
 In the future, the trick of creating an ascii column to represent band as an integer will not be needed.
 The development of Portal functionality to plot multi-band light curves in which points are colored by filter is planned.
-
-
-## 2. Choose an extended object.
-
-### 2.1. Confirm the results view.
-
-The query should have returned 1004 objects.
-
-The results view should appear similar to the figure below (panel size ratios or colors may differ).
-
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
-
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
-
-### 2.2. Select an object.
-
-Large scale clustering of the bright red extended objects can be seen in the active chart.
-
-Click on any point in one of the clumps, and it will be highlighted in all three panels.
-
-In the coverage map at upper left, zoom in on the selected point in the HiPS map.
-
-<img src="images/screenshot_2.png" alt="Zoom in one one interesting galaxy." width="400"/>
-
-Figure 3: The results view after selecting an object and zooming in on the coverage chart.
-
-## 3. View the object in the deep coadd.
-
-The HiPS maps are intended for quicklook and data discovery, not scientific analysis, but the corresponding `deepCoadd` images can be retrieved.
-
-### 3.1. Select the object in the table.
-
-Click the box in the leftmost column of the table to select the row.
-
-### 3.2. Create an image query for the selected object.
-
-In the table's upper right corner, there are several icons.
-
-Hover over the first in the row, and the pop-up "Search drop down: search based on table" will appear.
-
-Click the icon to see the search drop down menu.
-
-Click on "Search ObsTAP for images at row".
-
-<img src="images/screenshot_3.png" alt="Search drop down." width="400"/>
-
-Figure 4: The search drop down menu.
-
-
-### 3.3. Search ObsTAP for images
-
-The default query is a search for any kind of image.
-
-Update the query to only search for deep coadd images.
-
-At left, under "Calibration Level", click the box next to 3, and under "Data Product Subtype" select `lsst.deepCoadd_calexp`.
-
-Click the blue "Search" button at lower left.
-
-<img src="images/screenshot_4.png" alt="Search drop down." width="400"/>
-
-Figure 5: The ObsTAP interface set to search for deep coadd images of the selected object.
-
-
-### 3.4. View the object in the deep coadd image
-
-Twelve deep coadd images, two per LSST filters u, g, r, i, z, and y, are retrieved because deeply coadded images overlap at the edges, and the object was in the overlap zone.
-
-The image that is selected in the table will display in the upper-left panel (the HiPS map is still there in the Coverage tab).
-
-Objects from the first query will be marked on the image.
-
-Zoom in on the object of interest.
-
-<img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
-
-Figure 6: The r-band deep coadd image, zoomed in on the object of interest.
-
-
-## 4. Exercises for the learner.
-
-Feel free to simply play around in the Portal.
-
-The image viewer interface is called "Firefly".
-
-It has a toolbar with functionality such as image scaling, recentering, line cut plots, and so on.
-
-The cutout functionality is still in development.
-
-Click on icons and try the tools.
-
-The button to restore defaults is under the wrench-and-hammer icon.
-
-
 
