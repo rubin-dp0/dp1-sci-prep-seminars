@@ -27,7 +27,7 @@ The current widely accepted model of an AGN is that the source of power is the a
 <img src="images/AGN_Unified.png" alt="AGN Infographic." width="400"/>
 
 Figure 1: A graphic demonstrating various types of active galaxies.
-It illustrates that the appearance of a sub-class might depend on the orientation of the axis of symmetry (defined by the accretion disk) with respect to our line of signt.
+It illustrates that the appearance of a sub-class might depend on the orientation of the axis of symmetry (defined by the accretion disk) with respect to our line of sight.
 
 
 **Data Preview 0.2 vs. Data Preview 1**
@@ -39,14 +39,16 @@ The LSST Science Pipelines have evolved considerably since being run on the DP0.
 
 Here, you will learn how to plot the light curve of a difference image analysis object (diaObject).
 In this demonstration, an RR Lyrae star is used. This star has coordinates RA, Dec = 62.1479031, -35.7991348 deg.
-This object has an identifier number diaObjectId = 1651589610221862935.
+This object has an identifier number ``diaObjectId`` = 1651589610221862935.
+The ``diaObjectId`` for a given coordinate can be obtained from the ``DiaObject`` table by
+making a spatial query on the coordinates with a small radius (a few arcseconds) that returns the ``diaObjectId`` column.
 As is appropriate for steady variable objects (rather than transients such as a supernova), the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
 
 **This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
-**Related tutorials relevant to strong lensing science.**
-See also the DP0.2 portal tutorials on exploring extended object populations, and the SAOImage DS9-like functionalities of Firefly.
+**Related tutorials relevant to AGN science.**
+See also the DP0.2 portal tutorials on exploring transient and variable sources, and specifically the one presented last week at the Rubin Assembly covering that subject.  
 
 ## 1. Execute the ADQL query.
 
@@ -56,7 +58,23 @@ In a browser, go to the URL [data.lsst.cloud](https://data.lsst.cloud).
 
 Select the Portal Aspect and follow the process to log in.
 
-### 1.2. Navigate to the DP0.2 ADQL interface.
+### 1.2. Determine the ``DiaObjectId`` for the object of interest.
+
+Navigate to the DP0.2 UI interface by selecting the "UI assisted" view on the uppoer right.
+
+From the top menu bar, select the "DP0.2 Catalogs" in the "Table Collection (Schema)" tab, and "dp02_dc2_catalogs_DiaObject" in the "Tables" tab.
+
+Select ``diaObjectId`` box and the ``nDiaSources`` in the table on the right.
+Under "Enter Constraints" uncheck "temporal" and check "spatial" box.
+Enter the coordinates of the object of interest - 62.1479031, -35.7991348 and 3 arc sec as the radius.
+Click "Search" - the resulting table on the bottom will show that the ``diaObjectId`` with the largest number of sources (366) is indeed 1651589610221862935.
+
+<img src="images/GettingdiaOjectId.png" alt="diaObjectId." width="400"/>
+
+Figure 2: the Portal UI interface ready to retrieve the ``diaObjectId``.
+
+
+### 1.3. Navigate to the DP0.2 ADQL interface.
 
 From the top menu bar, select the "DP0.2 Catalogs" tab.
 
