@@ -42,15 +42,16 @@ In this demonstration, an RR Lyrae star is used. This star has coordinates RA, D
 This object has an identifier number ``diaObjectId`` = 1651589610221862935.
 The ``diaObjectId`` for a given coordinate can be obtained from the ``DiaObject`` table by
 making a spatial query on the coordinates with a small radius (a few arcseconds) that returns the ``diaObjectId`` column.
+This is illustrated in Step 1.2.  
 As is appropriate for steady variable objects (rather than transients such as a supernova), the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
 
-**This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science**
+**This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science.**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to AGN science.**
 See also the DP0.2 portal tutorials on exploring transient and variable sources, and specifically the one presented last week at the Rubin Assembly covering that subject.  
 
-## 1. Execute the ADQL query.
+## 1. Prepare and execute the ADQL query.
 
 ### 1.1. Log in to the RSP Portal.
 
@@ -70,7 +71,7 @@ Notice also that query constraints can be set up in this table interface.
 
 From the top menu bar, select the "dp0.2_dc2_catalogs" in the "Table Collection (Schema)" box, and "dp02_dc2_catalogs_DiaObject" in the "Tables" box.
 
-Select ``diaObjectId`` box and the ``nDiaSources`` in the table on the right.
+Select ``diaObjectId`` box and the ``nDiaSources`` in the table for the output column selections and constraints on the right.
 Under "Enter Constraints" uncheck "temporal" and check "spatial" box.
 Enter the coordinates of the object of interest - 62.1479031, -35.7991348 and 3 arc sec as the radius.
 Click "Search" - the resulting table on the bottom will show that the ``diaObjectId`` with the largest number of sources (366) is indeed 1651589610221862935.
@@ -101,29 +102,21 @@ SELECT cv.expMidptMJD, fsodo.psfFlux, fsodo.psfFluxErr, fsodo.band
 
 **About the query.**
 
-The query selects 4 columns to be returned from the DP0.2 `Forced Source on DIA Object` table.
+The query selects 3 columns to be returned from the DP0.2 `Forced Source on DIA Object` table and one column from the `dp02_dc2_catalogs.CcdVisit` table.
+Those two tables have a common metadata `ccdVisitId` and the join allows the retrieval of the observatgion epoch.
 The use of the `Forced Source` allows to return a measurement of source flux even if it was not detected at the 5 sigma level (the limit for the source flux to be included in the `DIA Source` catalog).
+The returned columns are:  
 
-* an object identifier (integer)
-* the coordinates right ascension and declination
-* object flux measurements in the g, r, and i filters
+* PSF flux measurement
+* PSF flux error
+* filters used for the measurements
+* and, from the CcdVisit table, the MJD of the observation
 
-The query constrains the results to only include rows (objects) that are:
+The query constrains the results to only include rows that are for an object with `diaObjectId` = 1651589610221862935
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
-* not a duplicate or parent object (`detect_isPrimary` = 1)
-* an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+Note that the photometric measurements are stored as fluxes in the tables, not magnitudes.
+`Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
 
-Details about the object flux measurements:
-
-* Photometric measurements are stored as fluxes in the tables, not magnitudes.
-* `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
-* The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
-or `cModel` fluxes are used.
 
 ## 2. Choose an extended object.
 
