@@ -1,4 +1,4 @@
-# Studying active galactic nuclei:  extracting a light curve of a variable object and extracting an image of a host galaxy
+# Studying active galactic nuclei:  extracting a light curve of a variable object and examining an image of a host galaxy
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -60,9 +60,15 @@ Select the Portal Aspect and follow the process to log in.
 
 ### 1.2. Determine the ``DiaObjectId`` for the object of interest.
 
+Select the DP0.2 Catalogs tab.
+
 Navigate to the DP0.2 UI interface by selecting the "UI assisted" view on the upper right.
 
-From the top menu bar, select the "DP0.2 Catalogs" in the "Table Collection (Schema)" tab, and "dp02_dc2_catalogs_DiaObject" in the "Tables" tab.
+Notice that various tables are available in the drop-down menus.
+
+Notice also that query constraints can be set up in this table interface.
+
+From the top menu bar, select the "dp0.2_dc2_catalogs" in the "Table Collection (Schema)" box, and "dp02_dc2_catalogs_DiaObject" in the "Tables" box.
 
 Select ``diaObjectId`` box and the ``nDiaSources`` in the table on the right.
 Under "Enter Constraints" uncheck "temporal" and check "spatial" box.
@@ -73,14 +79,9 @@ Click "Search" - the resulting table on the bottom will show that the ``diaObjec
 
 Figure 2: the Portal UI interface ready to retrieve the ``diaObjectId``.
 
-
 ### 1.3. Navigate to the DP0.2 ADQL interface.
 
 From the top menu bar, select the "DP0.2 Catalogs" tab.
-
-Notice that various tables are available in the drop-down menus.
-
-Notice also that query constraints can be set up in this table interface.
 
 At upper right, click the toggle to "Edit ADQL".
 
@@ -91,13 +92,11 @@ Copy and paste the following into the ADQL Query box.
 At lower left, click the blue "Search" button.
 
 ~~~~mysql    
-SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62.3, -38.4, 1))=1
-    AND (detect_isPrimary =1 AND refExtendedness =1
-      AND r_cModelFlux <575000 AND r_cModelFlux >91000
-      AND g_cModelFlux >36000 AND i_cModelFlux <575000
-      AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
+SELECT cv.expMidptMJD, fsodo.psfFlux, fsodo.psfFluxErr, fsodo.band 
+   FROM dp02_dc2_catalogs.ForcedSourceOnDiaObject as fsodo
+   JOIN dp02_dc2_catalogs.CcdVisit as cv
+   ON cv.ccdVisitId = fsodo.ccdVisitId
+   WHERE fsodo.diaObjectId = 1651589610221862935
 ~~~~
 
 **About the query.**
