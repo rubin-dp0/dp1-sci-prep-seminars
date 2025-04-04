@@ -24,9 +24,10 @@ AGN often vary in all observable spectral bands on a wide range of time scales.
 This implies a very compact source, typically smaller than a light-year.
 The current widely accepted model of an AGN is that the source of power is the accretion of galaxian matter onto the central black hole, releasing its gravitational energy into heat.
 
-<img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
+<img src="images/AGN_Unified.png" alt="AGN Infographic." width="400"/>
 
-Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (pink) due to the mass of a foreground galaxy (blue) from Earth's perspective (right side), and appears as a strongly-lensed object in an image (left side).
+Figure 1: A graphic demonstrating various types of active galaxies.
+It illustrates that the appearance of a sub-class might depend on the orientation of the axis of symmetry (defined by the accretion disk) with respect to our line of signt.
 
 
 **Data Preview 0.2 vs. Data Preview 1**
