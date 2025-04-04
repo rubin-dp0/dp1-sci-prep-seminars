@@ -103,7 +103,7 @@ SELECT cv.expMidptMJD, fsodo.psfFlux, fsodo.psfFluxErr, fsodo.band
 **About the query.**
 
 The query selects 3 columns to be returned from the DP0.2 `Forced Source on DIA Object` table and one column from the `dp02_dc2_catalogs.CcdVisit` table.
-Those two tables have a common metadata `ccdVisitId` and the join allows the retrieval of the observatgion epoch.
+Those two tables have a common metadata `ccdVisitId` and the join allows the retrieval of the observation epoch.
 The use of the `Forced Source` allows to return a measurement of source flux even if it was not detected at the 5 sigma level (the limit for the source flux to be included in the `DIA Source` catalog).
 The returned columns are:  
 
