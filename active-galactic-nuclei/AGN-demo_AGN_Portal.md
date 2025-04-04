@@ -120,7 +120,7 @@ Note that the photometric measurements are stored as fluxes in the tables, not m
 **2. The default plot is an all-filter light curve.**
 The first two columns, date and flux, are plotted on the x- and y-axes of the default Active Chart for all filters (Figure 1).
 
-<img src="images/AGN_Lightcurve_3.png" alt="AGN Lightcurve 3" width="400"/>
+<img src="images/AGN_Lightcurve_3.png" alt="AGN Lightcurve 3" width="800"/>
 
 Figure 3: The light curve of the selected variable object, measured in all bands.
 
@@ -129,7 +129,7 @@ Figure 3: The light curve of the selected variable object, measured in all bands
 In the table header, in the "band" column, click on the constraint box and then select "i" in the pop-up window and click "Apply".
 The plot will update to display i-band fluxes only (Figure 2).
 
-<img src="images/AGN_Lightcurve_4.png" alt="AGN Lightcurve 4." width="400"/>
+<img src="images/AGN_Lightcurve_4.png" alt="AGN Lightcurve 4." width="800"/>
 
 Figure 4: The light curve of the selected variable object, with only i-band data selected and plotted.
 
@@ -148,7 +148,7 @@ Figure 5: The "Add a column" pop-up window to create a new column of integer num
 
 Figure 6: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
 
-<img src="images/AGN_Lightcurve_7.png" alt="AGN Lightcurve 7." width="400"/>
+<img src="images/AGN_Lightcurve_7.png" alt="AGN Lightcurve 7." width="800"/>
 
 Figure 7: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
 
