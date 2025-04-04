@@ -6,7 +6,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-03-30
 
-**Learning objective:** Use the ADQL interface to extract multi-band photometry of a varible object
+**Learning objective:** Use the ADQL interface to extract multi-band photometry of a variable object
 
 **LSST data products:** `Object` catalog, `deepCoadd` image
 
