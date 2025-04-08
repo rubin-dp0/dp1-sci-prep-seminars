@@ -8,8 +8,7 @@
 
 **Targeted learning level:** Intermediate
 
-Introduction
-============
+## Introduction
 
 This tutorial demonstrates how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
 TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputne (``a`` > 30.1 AU).
@@ -36,13 +35,12 @@ and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`
 and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
 For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
 
-Step 1. Identify a population of TNOs
-=====================================
+## Step 1. Identify a population of TNOs
 
-**1.1.** Log into the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
+### 1.1. Log into the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
-**1.2.** At upper right, next to "View" choose "Edit ADQL".
+### 1.2. At upper right, next to "View" choose "Edit ADQL".
 Enter the following ADQL statement into the ADQL Query box.
 It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a
 random subset of objects in the ``MPCORB`` table.
@@ -56,10 +54,10 @@ DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`
     WHERE ssObjectId > 9000000000000000000 
 
 
-**1.3.** Set the "Row Limit" to be 200000 and click "Search".  
+### 1.3. Set the "Row Limit" to be 200000 and click "Search".  
 
 
-**1.4.** The default results view will show a heatmap plot of ``q`` vs. ``e`` at left, and the table view at right.
+### 1.4. The default results view will show a heatmap plot of ``q`` vs. ``e`` at left, and the table view at right.
 
 .. figure:: /_static/portal_tut03_step01a.png
     :width: 600
@@ -69,7 +67,7 @@ DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`
     Figure 1: The default results view for the query, with the table at right and the heatmap at left.
 
 
-**1.5.**  Exclude the objects moving on unbound orbits.  
+### 1.5.  Exclude the objects moving on unbound orbits.  
 Note that a small fraction of the objects - roughly one in a thousand - have derived eccentricities > 1, which means they are not bound to the Solar System.  
 Those objects can be excluded from further analysis by entering ``< 1`` in the box underneath the table heading ``e``, and hitting "enter."  
 This will result in a slightly modified display as below.  
@@ -82,7 +80,7 @@ This will result in a slightly modified display as below.
     Figure 2: The view for the query with ``e < 1``.  
 
 
-**1.6.** Create a new column in the table, containing semimajor axis, ``a``.
+### 1.6. Create a new column in the table, containing semimajor axis, ``a``.
 In the upper right column of the table panel, click on the icon to add a column (a tall narrow rectangle to the left of a + sign).
 In the pop-up window to "Add a column", set the "Name" to "a", the "Expression" to "q/(1.0-e)", the "Units" to "au",
 and the "Description" to "semimajor axis".  
@@ -96,7 +94,7 @@ Click "Add Column", and see the new column appear in the table.
     Figure 3: Screenshot showing the "Add a column" pop-up window.
 
 
-**1.7.** Create a scatter plot of inclination vs. semimajor axis.
+### 1.7. Create a scatter plot of inclination vs. semimajor axis.
 In the plot panel, click on the "+" sign the upper left side.  
 This will bring up the "Add New Chart" pop-up window.  
 Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl".
@@ -111,7 +109,7 @@ Click "OK".
     Figure 4: Screenshot showing how to create a new plot with these parameters.
 
 
-**1.8.** Delete the default plot by clicking on the blue cross in the upper right corner, so that only the newly-created plot appears (it should look like the plot below).
+### 1.8. Delete the default plot by clicking on the blue cross in the upper right corner, so that only the newly-created plot appears (it should look like the plot below).
 TNOs appear as a distinct population with ``a`` > 30.1 au in this parameter space.
 
 .. figure:: /_static/portal_tut03_step01e.png
@@ -121,7 +119,7 @@ TNOs appear as a distinct population with ``a`` > 30.1 au in this parameter spac
 
     Figure 5: The population of TNOs has x-values greater than 30 au.
 
-**1.9.**  Notice that in the plot above, the majority of objects returned by the query have semimajor axes less than 30.1 au.  
+### 1.9.  Notice that in the plot above, the majority of objects returned by the query have semimajor axes less than 30.1 au.  
 In fact, only about 800 of the moving objects from the query were TNOs.
 TNOs are at much larger distances from the Sun than Main-Belt Asteroids, which make them fainter and harder to detect and characterize, 
 so fewer TNOs are expected to be detected than Main-Belt Asteroids.
