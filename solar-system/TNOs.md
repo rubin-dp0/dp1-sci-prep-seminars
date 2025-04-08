@@ -8,9 +8,6 @@
 
 **Targeted learning level:** Intermediate
 
-
-.. _DP0-3-Portal-3-Intro:
-
 Introduction
 ============
 
@@ -38,9 +35,6 @@ This tutorial assumes the successful completion of Portal tutorial 01: Introduct
 and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`` tables, 
 and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
 For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
-
-
-.. _DP0-3-Portal-3-Step-1:
 
 Step 1. Identify a population of TNOs
 =====================================
@@ -133,8 +127,6 @@ TNOs are at much larger distances from the Sun than Main-Belt Asteroids, which m
 so fewer TNOs are expected to be detected than Main-Belt Asteroids.
 In the next step, a revised query will be used to only retrieve objects with semimajor axes greater than 30.1 au.
 
-
-.. _DP0-3-Portal-3-Step-2:
 
 Step 2. Explore the properties of a population of TNOs
 ======================================================
