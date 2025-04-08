@@ -1,8 +1,4 @@
-##################################################################
-03. Explore Transneptunian Objects (TNOs) in DP0.3 (Intermediate)
-##################################################################
-
-.. This section should provide a brief, top-level description of the page.
+# Explore Transneptunian Objects (TNOs) in DP0.3
 
 **RSP Aspect:** Portal
 
