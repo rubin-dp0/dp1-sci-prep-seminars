@@ -161,6 +161,8 @@ This should reduce the number of selected objects to 499, and your plots should 
 
 Figure 8: Plots showing `gPSFluxStetsonJ` vs. `gmag`, and `gPSFluxChi2` vs. `gmag` for objects with more than 30 g-band detections.
 
+### 3.2. Select a candidate variable and plot its lightcurve.
+
 Select a relatively bright outlier (e.g., with `gmag` < 21) that lies above the blob of points clustered at `gPSFluxStetsonJ` = 0 and `gPSFluxChi2` = 0.
 
 As before, switch to the "Data product: " tab. Under the "More" dropdown, select "Show: Retrieve ForcedSourceOnDiaObject time series" (note that we want the `ForcedSourceOnDiaObject` table here, because near its mean flux, a variable object will not produce a DiaSource).
