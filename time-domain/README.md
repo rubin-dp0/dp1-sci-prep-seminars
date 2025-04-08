@@ -12,7 +12,7 @@ Ryan Lau, Jeff Carlin
 
 We will demonstrate two notebooks (time permitting):
 
-[DiaObject_Anomaly_Detection.ipynb](https://github.com/lsst/tutorial-notebooks/blob/main/DP0.2/17_DiaObject_Anomaly_Detection.ipynb)
+[DiaObject_Anomaly_Detection.ipynb](https://github.com/lsst/tutorial-notebooks/blob/main/DP0.2/17_DiaObject_Anomaly_Detection.ipynb) (DP0.2 tutorial notebook 17)
 
 * Use an Isolation Forest algorithm on the DP0.2 DiaObject Table to identify anomalies.
 * Plot the results and inspect anomalies and lightcurves of anomalous objects.
