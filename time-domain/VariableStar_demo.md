@@ -1,4 +1,4 @@
-# Searching for variable stars
+# Searching for transients and variable stars
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -6,9 +6,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-04-07
 
-**Learning objective:** Use the ADQL interface to query for bright red extended objects that might be potential foreground lenses. Investigate the r-band `deepCoadd` image of a galaxy.
+**Learning objective:** Use the ADQL interface to query for objects whose flux varied significantly. Investigate the `DiaObject` catalog quantities, and use them to select candidate transients and variables. Plot time series lightcurves of their measurements in difference images.
 
-**LSST data products:** `Object` catalog, `deepCoadd` image
+**LSST data products:** `DiaObject`, `DiaSource`, and `ForcedSourceOnDiaObject` catalogs
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
@@ -16,7 +16,17 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 ## Introduction
 
+The LSST is primarily a time-domain survey, and will thus uncover a wide variety of astrophysical objects whose flux varies with time, including supernovae, variable stars, active galactic nuclei, and asteroids, among many others.
+The primary means of finding transients and variables is to use "difference imaging," in which newly-acquired images of the sky are compared against existing "template" images of that same region of sky to look for things that have changed.
+Templates are typically built up over time as high-quality, coadded images. When a new image is acquired, difference imaging is performed by subtracting an appropriately-scaled template image from the newly-acquired science image, resulting in a "difference image" that contains only sources that changed between the template and science image. Such changes could be new objects (e.g., a supernova that recently exploded) or changes in the flux of existing objects (such as variable stars or active galactic nuclei). The following figure illustrates how difference imaging is performed:
 
+<img src="images/diffim_example.png" alt="How difference imaging works." width="400"/>
+
+Figure 1: Illustration of a supernova discovered in the [ZTF survey](https://antares.noirlab.edu/loci/ANT20257p4qy29ofx48). The middle panel shows the template image of a barred spiral galaxy, which was subtracted from the left-hand image of that same galaxy to produce the difference image seen on the right. The point source (a likely supernova in the spiral galaxy) that appeared in the science image, and was not present in the template, shows clearly as the only obvious source in the difference image.
+
+In the LSST Science Pipelines, detections of sources on difference images are known as `DiaSources`, and their measurements are contained in the `DiaSource` table. Each `DiaSource` corresponds to a `DiaObject`, where a `DiaObject` can be thought of as corresponding to a single astrophysical object (i.e., a star, asteroid, supernova, etc.). Thus the `DiaObject` table contains a list of "objects" identified from difference images, plus statistics summarizing all of the `DiaSource` measurements of each object. Light curves can be built from the `DiaSource` tables, or additionally from the "forced" measurements performed on difference images at the positions of all `DiaObjects`. These appear in the `ForcedSourceOnDiaObject` tables.
+
+In this tutorial, we will explore using statistics reported in the `DiaObject` table to select candidate transients and variables, then extracting time series from either `DiaSource` or `ForcedSourceOnDiaObject` tables to examine light curves.
 
 ## 1. Execute the ADQL query.
 
@@ -62,30 +72,28 @@ SELECT ra, decl, diaObjectId, nDiaSources, gPSFluxNdata,
 
 **About the query.**
 
-The query selects 6 columns to be returned from the DP0.2 `Object` table.
+The query selects many columns to be returned from the DP0.2 `DiaObject` table.
 
-* an object identifier (integer)
+* a diaObject identifier (integer)
 * the coordinates right ascension and declination
-* object flux measurements in the g, r, and i filters
+* the total number of DiaSources and number of detections in each band
+* mean object flux measurements from science images in g and r filters (e.g., `gTOTFluxMean`)
+* mean object flux measurements from difference images in g and r filters (e.g., `gPSFluxMean`)
+* statistics characterizing the ensemble of measurements from all difference images
 
 The query constrains the results to only include rows (objects) that are:
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
-* not a duplicate or parent object (`detect_isPrimary` = 1)
-* an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+* in the search area (within a 5 degree radius of RA, Dec = 56.1, -33.2 deg)
+* not likely to be saturated in either the science image or difference image (abs(flux) < 1e5)
+* has at least 10 DiaSources (`nDiaSources` > 10; over all bands) and 8 detections in r-band difference images (`rPSFluxNdata` > 8)
 
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
-* `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
-* The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
-or `cModel` fluxes are used.
+* `DiaObject` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
+* Point-source fluxes extracted using the best-fit point-spread function (PSF) are used for all explorations in this tutorial. In DP0.2 DIA products, these have "PSFlux" in the column names.
 
-## 2. Choose an extended object.
+## 2. Choose an object likely to be a supernova.
 
 ### 2.1. Confirm the results view.
 
