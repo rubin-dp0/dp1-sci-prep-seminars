@@ -151,12 +151,11 @@ Increase the number of bins to 200 for both x and y to improve the resolution of
 Expand the "Chart Options" and set the titles and labels as below.
 Restrict the x-axis to ``30 < a < 100`` au.  
 
-.. figure:: /_static/portal_tut03_step02a.png
-    :width: 400
-    :name: portal_tut03_step02a
-    :alt: A screenshot of the plot parameters for the eccentricity vs. semimajor axis plot 
+<img src="images/portal_tut03_step02a.png" alt="A screenshot of the plot parameters for the eccentricity vs. semimajor axis plot." width="400"/>
 
-    Figure 6: The plot parameters for the eccentricity vs. semimajor axis plot. 
+<!---
+Figure 6: The plot parameters for the eccentricity vs. semimajor axis plot.
+-->
 
 ### 2.6.  Click on the "OK" button in the "Add New Chart" window, and view the plot (see below).
 Delete the default plot of inclination vs. eccentricity as it is not needed.
