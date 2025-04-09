@@ -136,13 +136,14 @@ Also include the absolute H magnitude ``mpcH`` which will be used in the derivat
 As TNOs aren't the only solar system objects beyond Neptune, reject objects with `mpcDesignation` as
 Long Period Comets (LPC).
 
-.. code-block:: SQL 
+~~~~mysql 
 
     SELECT e, incl, q, mpcH, mpcDesignation  
     FROM dp03_catalogs_10yr.MPCORB
     WHERE q / (1 - e) > 30.1 
     AND SUBSTRING(mpcDesignation, 1, 3) != 'LPC'
 
+~~~~
 
 ### 2.3. Keep the "Row limit" to 200000, and click "Search".
 This query will return 62,961 objects.
