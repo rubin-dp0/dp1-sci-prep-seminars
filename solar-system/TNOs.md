@@ -47,12 +47,12 @@ random subset of objects in the ``MPCORB`` table.
 For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of
 DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables.
 
-.. code-block:: SQL 
+~~~~mysql 
 
     SELECT e, q, incl 
     FROM dp03_catalogs_10yr.MPCORB 
     WHERE ssObjectId > 9000000000000000000 
-
+~~~~
 
 ### 1.3. Set the "Row Limit" to be 200000 and click "Search".  
 
