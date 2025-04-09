@@ -10,7 +10,13 @@ Ryan Lau, Jeff Carlin
 
 ## Tutorial
 
-We will demonstrate two notebooks (time permitting):
+We will go through a portal demonstration and two notebooks (time permitting):
+
+`Transient_Variable_demo.md`
+
+* Query the DiaObject table, and plot various statistical quantities to identify transient and variable objects.
+* Identify a supernova candidate and plot its time series from DiaSource.
+* Identify a variable star candidate and plot its time series from ForcedSourceOnDiaObject.
 
 [DiaObject_Anomaly_Detection.ipynb](https://github.com/lsst/tutorial-notebooks/blob/main/DP0.2/17_DiaObject_Anomaly_Detection.ipynb) (DP0.2 tutorial notebook 17)
 
