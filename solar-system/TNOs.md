@@ -82,13 +82,11 @@ In the pop-up window to "Add a column", set the "Name" to "a", the "Expression" 
 and the "Description" to "semimajor axis".  
 Click "Add Column", and see the new column appear in the table.
 
-.. figure:: /_static/portal_tut03_step01c.png
-    :width: 400
-    :name: portal_tut03_step01c
-    :alt: A screenshot of the pop-up window to add a column.
+<img src="images/portal_tut03_step01c.png" alt="A screenshot of the pop-up window to add a column." width="400"/>
 
-    Figure 3: Screenshot showing the "Add a column" pop-up window.
-
+<!---
+Figure 3: Screenshot showing the "Add a column" pop-up window.
+-->
 
 ### 1.7. Create a scatter plot of inclination vs. semimajor axis.
 In the plot panel, click on the "+" sign the upper left side.  
