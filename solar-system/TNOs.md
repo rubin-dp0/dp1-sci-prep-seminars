@@ -104,12 +104,11 @@ Figure 4: Screenshot showing how to create a new plot with these parameters.
 ### 1.8. Delete the default plot by clicking on the blue cross in the upper right corner, so that only the newly-created plot appears (it should look like the plot below).
 TNOs appear as a distinct population with ``a`` > 30.1 au in this parameter space.
 
-.. figure:: /_static/portal_tut03_step01e.png
-    :width: 600
-    :name: portal_tut03_step01e
-    :alt: A screenshot of the inclination versus semimajor axis plot, showing a clear population of TNOs.
+<img src="images/portal_tut03_step01e.png" alt="A screenshot of the inclination versus semimajor axis plot, showing a clear population of TNOs." width="600"/>
 
-    Figure 5: The population of TNOs has x-values greater than 30 au.
+<!---
+Figure 5: The population of TNOs has x-values greater than 30 au.
+-->
 
 ### 1.9.  Notice that in the plot above, the majority of objects returned by the query have semimajor axes less than 30.1 au.  
 In fact, only about 800 of the moving objects from the query were TNOs.
