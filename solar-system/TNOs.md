@@ -95,13 +95,11 @@ Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl".
 In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80.  
 Click "OK".
 
-.. figure:: /_static/portal_tut03_step01d.png
-    :width: 400
-    :name: portal_tut03_step01d
-    :alt: A screenshot of the plot parameters pop-up window.
+<img src="images/portal_tut03_step01d.png" alt="A screenshot of the plot parameters pop-up window." width="400"/>
 
-    Figure 4: Screenshot showing how to create a new plot with these parameters.
-
+<!---
+Figure 4: Screenshot showing how to create a new plot with these parameters.
+-->
 
 ### 1.8. Delete the default plot by clicking on the blue cross in the upper right corner, so that only the newly-created plot appears (it should look like the plot below).
 TNOs appear as a distinct population with ``a`` > 30.1 au in this parameter space.
