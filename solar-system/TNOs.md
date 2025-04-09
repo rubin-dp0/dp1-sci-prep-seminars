@@ -160,12 +160,11 @@ Figure 6: The plot parameters for the eccentricity vs. semimajor axis plot.
 ### 2.6.  Click on the "OK" button in the "Add New Chart" window, and view the plot (see below).
 Delete the default plot of inclination vs. eccentricity as it is not needed.
 
-.. figure:: /_static/portal_tut03_step02b.png
-    :width: 600
-    :name: portal_tut03_step02b
-    :alt: A screenshot of the plot of the eccentricity vs. semimajor axis 
+<img src="images/portal_tut03_step02b.png" alt="A screenshot of the plot of the eccentricity vs. semimajor axis." width="600"/>
 
-    Figure 7: The plot of eccentricity vs. semimajor axis of transneptunian objects (TNOs).
+<!---
+Figure 7: The plot of eccentricity vs. semimajor axis of transneptunian objects (TNOs).
+-->
 
 ### 2.7. Multiple sub-populations are apparent in the above plot.
 The majority of the objects have low eccentricity (``e < 0.3``) and a semimajor axis of about 30 to about 50 au.
