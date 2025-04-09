@@ -180,12 +180,11 @@ Click on the "add column" icon.
 Enter ``D`` in the "name" field, ``power(10,(3.536 - 0.2 * mpcH))`` in the expression field, "km" as the units, and "diameter" as the description as below.
 Click the "Add Column" button.  
 
-.. figure:: /_static/portal_tut03_step02c.png
-    :width: 400
-    :name: portal_tut03_step02c
-    :alt: screenshot illustrating the expression needed to make the new column containing the diameter
+<img src="images/portal_tut03_step02c.png" alt="Screenshot illustrating the expression needed to make the new column containing the diameter" width="400"/>
 
-    Figure 8: How to add a new column containing the estimated diameter. 
+<!---
+Figure 8: How to add a new column containing the estimated diameter. 
+-->
 
 ### 2.9.  Plot the distribution of estimated diameters in log-space.
 Click on the "+" sign in the pop-up window, click on "Add New Chart," select "Histogram", and enter the parameters as below.  
