@@ -59,14 +59,6 @@ DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`
 
 ### 1.4. The default results view will show a heatmap plot of ``q`` vs. ``e`` at left, and the table view at right.
 
-.. figure:: /_static/portal_tut03_step01a.png
-    :width: 600
-    :name: portal_tut03_step01a
-    :alt: A screenshot of the default results view for the query.
-
-    Figure 1: The default results view for the query, with the table at right and the heatmap at left.
-
-
 <img src="images/portal_tut03_step01a.png" alt="A screenshot of the default results view for the query." width="600"/>
 
 ### 1.5.  Exclude the objects moving on unbound orbits.  
