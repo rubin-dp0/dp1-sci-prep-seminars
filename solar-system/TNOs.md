@@ -66,13 +66,11 @@ Note that a small fraction of the objects - roughly one in a thousand - have der
 Those objects can be excluded from further analysis by entering ``< 1`` in the box underneath the table heading ``e``, and hitting "enter."  
 This will result in a slightly modified display as below.  
 
-.. figure:: /_static/portal_tut03_step01b.png
-    :width: 600
-    :name: portal_tut03_step01b
-    :alt: A screenshot of the default results view for the modified query.
+<img src="images/portal_tut03_step01b.png" alt="A screenshot of the default results view for the modified query." width="600"/>
 
-    Figure 2: The view for the query with ``e < 1``.  
-
+<!---
+Figure 2: The view for the query with ``e < 1``. 
+-->
 
 ### 1.6. Create a new column in the table, containing semimajor axis, ``a``.
 In the upper right column of the table panel, click on the icon to add a column (a tall narrow rectangle to the left of a + sign).
