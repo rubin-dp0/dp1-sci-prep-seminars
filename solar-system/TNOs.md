@@ -67,6 +67,8 @@ DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`
     Figure 1: The default results view for the query, with the table at right and the heatmap at left.
 
 
+<img src="images/portal_tut03_step01a.png" alt="A screenshot of the default results view for the query." width="600"/>
+
 ### 1.5.  Exclude the objects moving on unbound orbits.  
 Note that a small fraction of the objects - roughly one in a thousand - have derived eccentricities > 1, which means they are not bound to the Solar System.  
 Those objects can be excluded from further analysis by entering ``< 1`` in the box underneath the table heading ``e``, and hitting "enter."  
