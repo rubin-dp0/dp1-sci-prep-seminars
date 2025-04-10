@@ -103,7 +103,7 @@ The results view should appear similar to the figure below (panel size ratios or
 
 <img src="images/screenshot_1.png" alt="Default results view." width="600"/>
 
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+Figure 2: The default results view after running the query. At upper left, a mostly blank window with "Data Products: " in the tab title (it's possible that you might see the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map instead). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
 ### 2.2. Plot statistical quantities from difference imaging to search for supernovae.
 
