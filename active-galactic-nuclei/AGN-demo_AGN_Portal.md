@@ -71,7 +71,7 @@ Notice that various tables are available in the drop-down menus.
 
 Notice also that query constraints can be set up in this table interface.
 
-From the top menu bar, select the "dp0.2_dc2_catalogs" in the "Table Collection (Schema)" box, and "dp02_dc2_catalogs_DiaObject" in the "Tables" box.
+From the top menu bar, select the "dp02_dc2_catalogs" in the "Table Collection (Schema)" box, and "dp02_dc2_catalogs_DiaObject" in the "Tables" box.
 
 Select ``diaObjectId`` box and the ``nDiaSources`` in the table for the output column selections and constraints on the right.
 Under "Enter Constraints" uncheck "temporal" and check "spatial" box.
@@ -104,9 +104,9 @@ SELECT cv.expMidptMJD, fsodo.psfFlux, fsodo.psfFluxErr, fsodo.band
 
 **About the query.**
 
-The query selects 3 columns to be returned from the DP0.2 `Forced Source on DIA Object` table and one column from the `dp02_dc2_catalogs.CcdVisit` table.
+The query selects 3 columns to be returned from the DP0.2 `dp02_dc2_catalogs.ForcedSourceOnDiaObject` table and one column from the `dp02_dc2_catalogs.CcdVisit` table.
 Those two tables have a common metadata `ccdVisitId` and the join allows the retrieval of the observation epoch.
-The use of the `Forced Source` allows to return a measurement of source flux even if it was not detected at the 5 sigma level (the limit for the source flux necessary to be included in the `DIA Source` catalog).
+The use of the `Forced Source` allows to return a measurement of source flux even if it was not detected at the 5 sigma level (the limit for the source flux necessary to be included in the `DiaSource` catalog).
 The returned columns are:  
 
 * PSF flux measurement
@@ -125,7 +125,6 @@ The first two columns, date and flux, are plotted on the x- and y-axes of the de
 <img src="images/AGN_Lightcurve_3.png" alt="AGN Lightcurve 3" width="800"/>
 
 Figure 3: The light curve of the selected variable object, measured in all bands.
-
 
 **1.2. Plot a single-filter light curve.**
 In the table header, in the "band" column, click on the constraint box and then select "i" in the pop-up window and click "Apply".
