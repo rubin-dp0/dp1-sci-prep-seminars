@@ -146,76 +146,59 @@ Follow the process to log in.
 ## 2.2. Select the "DP0.2 Images" tab in the Portal.
 Click on the "DP0.2 Images" tab at the top to navigate to the DP0.2 image search page, as shown in Figure 1.
 
-.. figure:: /_static/portal-howto-query-image-1.png
-    :name: portal_howto_query_image_viaObsTAP-1
-    :alt: A screenshot of the DP0.2 image search landing page, annotated with labels.
+<img src="images/AGN_Image_1.png" alt="AGN Image 1." width="800"/>
 
 Figure 5: A screenshot of the DP0.2 image search landing page, annotated with labels. 
-
 
 ## 2.3. Set observation type and source (B in Figure 5).
 Select IVOA standard "Calibration Level" 2 to retrieve processed visit images (PVIs; also called "calexps") and "lsst.calexp" in the "Data Product Subtype" drop-down menu. 
 
-## 2.4. Set location (C in Figure 5).**
+## 2.4. Set location (C in Figure 5).
 Choose "Observation boundary contains point" for "Query Type" and enter 61.863, -35.790.
 
-**5. Set timing (D in Figure 5).**
+# 2.5. Set timing (D in Figure 5).
 Check "Timing", select "Overlapping specified range" for "Time of Observation",
 choose "MJD values", and enter 60000 as the Start Time and 60500 as the End Time.  
 
-.. figure:: /_static/portal-howto-query-image-2.png
-    :name: portal_howto_query_image_viaObsTAP-2
-    :width: 500
-    :alt: A screenshot showing how to constrain timing in an image query.
+<img src="images/AGN_Image_2.png" alt="AGN Image 2." width="800"/>
 
-    Figure 2: A screenshot demonstrating how to constrain timing in an image query by specifying the start and end times for the overlapping observation period in MJD. 
+Figure 6: A screenshot demonstrating how to constrain timing in an image query by specifying the start and end times for the overlapping observation period in MJD. 
 
-
-**6. Set spectral coverage (E in Figure 1).**
+## 2.6. Set spectral coverage (E in Figure 5).
 To constrain an image query by the LSSTCam's filter or wavelength, check the "Spectral Coverage" box and
 check the "u" box to only retrieve u-band images. 
 
-.. figure:: /_static/portal-howto-query-image-3.png
-    :name: portal_howto_query_image_viaObsTAP-3
-    :width: 500
-    :alt: A screenshot showing how to constrain spectral coverage in an image query.
+<img src="images/AGN_Image_3.png" alt="AGN Image 3." width="800"/>
 
-    Figure 3: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
+Figure 7: A screenshot demonstrating how to constrain spectral coverage in an image query by specifying the LSSTCam's filter.
 
-
-**7. Output column selection (F in Figure 1).**
+## 2.7. Output column selection (F in Figure 5).
 The default is 27 out of 37 columns to be selected. It is recommended to return all selected metadata.
 Click on the “Search” button. 
 
-**8. Results.**
+## 2.8. Results.
 The query returns seven u-band PVIs that meet all the constraints specified in Section 2.
 
-.. figure:: /_static/portal-howto-query-image-4.png
-    :name: portal_howto_query_image_viaObsTAP-4
-    :width: 700
-    :alt: A screenshot showing the query results.
+<img src="images/AGN_Image_4.png" alt="AGN Image 4." width="800"/>
 
-    Figure 4: A screenshot displaying the image query results, showing seven u-band PVIs.
-
-
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
+Figure 8: A screenshot displaying the image query results, showing seven u-band PVIs.
 
 
 **4. Optional:  Color markers by band in a multi-band light curve.**
-To set marker color based on band (filter), create a new column in which the band is represented as a number (Figure 5) and then a color map based on those numbers (Figure 6).
-The plot will then display points colored by band (Figure 7).
+To set marker color based on band (filter), create a new column in which the band is represented as a number (Figure 9) and then a color map based on those numbers (Figure 10).
+The plot will then display points colored by band (Figure 11).
 
 <img src="images/AGN_Lightcurve_5.png" alt="AGN Lightcurve 5." width="400"/>
 
-Figure 5: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
+Figure 9: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
 
 <img src="images/AGN_Lightcurve_6.png" alt="AGN Lightcurve 6." width="400"/>
 
-Figure 6: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
+Figure 10: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
 
 <img src="images/AGN_Lightcurve_7.png" alt="AGN Lightcurve 7." width="800"/>
 
-Figure 7: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
+Figure 11: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
 
 
 **Notice:**
