@@ -119,7 +119,7 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
       AND r_extendedness = 0
 ~~~~
 
-~~~~mysq1
+~~~~mysql 
 SELECT objectId, coord_ra, coord_dec, detect_isPrimary,
        u_calibFlux, 376 AS u_wave,
        g_calibFlux, 427 AS g_wave,
