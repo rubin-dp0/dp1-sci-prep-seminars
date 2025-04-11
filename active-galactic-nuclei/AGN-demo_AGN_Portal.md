@@ -156,7 +156,7 @@ Select IVOA standard "Calibration Level" 2 to retrieve processed visit images (P
 ## 2.4. Set location (C in Figure 5).
 Choose "Observation boundary contains point" for "Query Type" and enter 61.863, -35.790.
 
-# 2.5. Set timing (D in Figure 5).
+## 2.5. Set timing (D in Figure 5).
 Check "Timing", select "Overlapping specified range" for "Time of Observation",
 choose "MJD values", and enter 60000 as the Start Time and 60500 as the End Time.  
 
@@ -184,7 +184,8 @@ The query returns seven u-band PVIs that meet all the constraints specified in S
 Figure 8: A screenshot displaying the image query results, showing seven u-band PVIs.
 
 
-**4. Optional:  Color markers by band in a multi-band light curve.**
+## 3. Optional:  Color markers by band in a multi-band light curve.
+First, perform all steps in Sec. 1.2 above to generate the light curve.  
 To set marker color based on band (filter), create a new column in which the band is represented as a number (Figure 9) and then a color map based on those numbers (Figure 10).
 The plot will then display points colored by band (Figure 11).
 
