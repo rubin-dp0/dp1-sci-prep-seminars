@@ -121,6 +121,8 @@ Figure 3: Location of Results Layout selection.
 The ADQL query returned colors for g, r, and i filters for each of the 10,000 stars discovered in step 1.
 To generate a CMD we need to alter the coord_ra and coord_dec default plot. 
 
+ADD INTERMEDIATE INSTRUCTIONS AND IMAGES
+
 ### 3.1. Click on the gear icon.
 
 Click on the gear icon in the right hand plot. 
