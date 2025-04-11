@@ -37,7 +37,7 @@ For more information about the DP0.3 catalogs, tables, and columns, see the :ref
 
 ## Step 1. Identify a population of TNOs
 
-### 1.1. Log into the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
+### 1.1. Log into the Rubin Science Platform at [data.lsst.cloud](https://data.lsst.cloud>) and select the Portal Aspect.
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
 ### 1.2. At upper right, next to "View" choose "Edit ADQL".
