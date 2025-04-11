@@ -1,30 +1,29 @@
-# Stars and Milky Way CMD and LC Demo
+# Stars and Milky Way CMD Demo
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0
 
-**Last verified to run:** 2025-03-03
+**Last verified to run:** 2025-04-11
 
-**Learning objective:** Use the ADQL interface to query for stars, generate a Color Magnitude Diagram and a Light Curve.
+**Learning objective:** Use the ADQL interface to query for stars, generate a Color Magnitude Diagram.
 
-**LSST data products:** `Object` catalog, `deepCoadd` image - UPDATE
+**LSST data products:** `Object` catalog, `deepCoadd` image
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum. 
+Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
-UPDATE Strong lensing occurs when a 1) foreground galaxy is aligned with a background galaxy, 2) those two objects are close enough to each other, and 3) the lensing foreground galaxy is sufficiently massive.
-
-The foreground galaxy perceptibly distorts the light from the background galaxy, and the background galaxy appears magnified and multiply-imaged, or as an arc or ring, instead of its true shape.
-
-In this case, the background galaxy is said to be "strongly lensed".
+ This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
+ This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
+ Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
 
 <img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
 
-Figure 1: A graphic demonstrating how a distant galaxy (red) appears distorted (pink) due to the mass of a foreground galaxy (blue) from Earth's perspective (right side), and appears as a strongly-lensed object in an image (left side).
+Figure 1: Log into the Portal aspect at the RSP
 
 
 **Data Preview 0.2 vs. Data Preview 1**
