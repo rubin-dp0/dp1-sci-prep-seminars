@@ -119,6 +119,30 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
       AND r_extendedness = 0
 ~~~~
 
+~~~~mysq1
+SELECT objectId, coord_ra, coord_dec, detect_isPrimary,
+       u_calibFlux, 376 AS u_wave,
+       g_calibFlux, 427 AS g_wave,
+       r_calibFlux, 628 AS r_wave,
+       i_calibFlux, 709 AS i_wave,
+       z_calibFlux, 833 AS z_wave,
+       y_calibFlux, 978 AS y_wave
+FROM dp02_dc2_catalogs.Object
+WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
+      AND detect_isPrimary = 1
+      AND u_calibFlux > 360
+      AND u_extendedness = 0
+      AND g_calibFlux > 360
+      AND g_extendedness = 0
+      AND r_calibFlux > 360
+      AND r_extendedness = 0
+      AND i_calibFlux > 360
+      AND i_extendedness = 0
+      AND z_calibFlux > 360
+      AND z_extendedness = 0
+      AND y_calibFlux > 360
+      AND y_extendedness = 0
+~~~~
 **About the query.**
 
 The query selects 6 columns to be returned from the DP0.2 `Object` table.
