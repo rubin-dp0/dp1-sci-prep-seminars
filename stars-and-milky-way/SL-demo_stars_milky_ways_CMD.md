@@ -6,7 +6,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-04-11
 
-**Learning objective:** Use the ADQL interface to query for stars, generate a Color Magnitude Diagram.
+**Learning objective:** Use the ADQL interface to query for stars and generate a Color Magnitude Diagram.
 
 **LSST data products:** `Object` catalog, `deepCoadd` image
 
@@ -21,7 +21,7 @@ Rubin staff will respond to all questions posted there.
  This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
  Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
 
-<img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
+<img src="/images/portal_stellar_cmd_step01_01.png" width="400"/>
 
 Figure 1: Log into the Portal aspect at the RSP
 
