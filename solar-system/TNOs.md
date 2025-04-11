@@ -27,7 +27,7 @@ Finally, it provides a visualization of its trajectory projected into 2D (see St
 
 More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
 and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
-(`PSTN-056 <https://pstn-056.lsst.io/>`_).
+[PSTN-056](https://pstn-056.lsst.io/).
 Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
 
 This tutorial assumes the successful completion of Portal tutorial 01: Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables 
