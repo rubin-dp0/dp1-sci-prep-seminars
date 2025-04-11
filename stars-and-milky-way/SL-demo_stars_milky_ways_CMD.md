@@ -97,7 +97,7 @@ Details about the object flux measurements:
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
 
-## 2. Choose an extended object.
+## 2. Create a color-magnitude diagram.
 
 ### 2.1. Confirm the results view.
 
@@ -109,35 +109,32 @@ The results view should appear similar to the figure below (panel size ratios or
 
 Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
-### 2.2. Select an object.
+### 2.2. Change portal view.
 
-Large scale clustering of the bright red extended objects can be seen in the active chart.
-
-Click on any point in one of the clumps, and it will be highlighted in all three panels.
-
-In the coverage map at upper left, zoom in on the selected point in the HiPS map.
+Click on the hamburger icon and scroll to Results Layout. Select Tables and Coverage Image Charts. 
 
 <img src="images/select_layout_CMD_step02.PNG" alt="Alter layout." width="600"/>
 
-Figure 3: The results view after selecting an object and zooming in on the coverage chart.
+Figure 3: Location of Results Layout selection.
 
-## 3. View the object in the deep coadd.
+## 3. Plot color vs. magnitude.
 
-The HiPS maps are intended for quicklook and data discovery, not scientific analysis, but the corresponding `deepCoadd` images can be retrieved.
+The ADQL query returned colors for g, r, and i filters for each of the 10,000 stars discovered in step 1.
+To generate a CMD we need to alter the coord_ra and coord_dec default plot. 
 
-### 3.1. Select the object in the table.
+### 3.1. Click on the gear icon.
 
-Click the box in the leftmost column of the table to select the row.
+Click on the gear icon in the right hand plot.
 
-### 3.2. Create an image query for the selected object.
+<img src="images/change_plot_CMD_step03.PNG" alt="Change plot." width="600"/>
 
-In the table's upper right corner, there are several icons.
+Figure 4: Gear icon to change plot parameters.
 
-Hover over the first in the row, and the pop-up "Search drop down: search based on table" will appear.
+### 3.2. Alter plot parameters.
 
-Click the icon to see the search drop down menu.
-
-Click on "Search ObsTAP for images at row".
+For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the chart title to "Color-magnitude diagram". Change the X Label to "color (r-i)" and
+the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
+Click Apply, then Close
 
 <img src="images/screenshot_3.png" alt="Search drop down." width="400"/>
 
