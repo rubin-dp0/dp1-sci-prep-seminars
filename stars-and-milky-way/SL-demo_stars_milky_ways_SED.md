@@ -28,12 +28,9 @@ Figure 1: Log into the Portal aspect at the RSP
 **Data Preview 0.2 vs. Data Preview 1**
 
 In the Data Preview 0.2 (DP0.2) simulation stars are quantized unlike the real data released as Data Preview 1 (DP1).
-Studying photometric SED to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
+Studying photometric SED within the DP0.2 dataset is still useful as the techniques used with the simulated data are comparable real data techniques.
 However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
-
-**This is not an introductory-level tutorial!**
-Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to stellar science.**
 See also the DP0.2 portal tutorials on plotting histograms, light curves, extracting pixel values, and the SAOImage DS9-like functionalities of Firefly.
@@ -60,63 +57,7 @@ At upper right, click the toggle to "Edit ADQL".
 
 Copy and paste the following into the ADQL Query box.
 
-At lower left, click the blue "Search" button.
-
-~~~~mysql    
-SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62.3, -38.4, 1))=1
-    AND (detect_isPrimary =1 AND refExtendedness =1
-      AND r_cModelFlux <575000 AND r_cModelFlux >91000
-      AND g_cModelFlux >36000 AND i_cModelFlux <575000
-      AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
-~~~~
-
-~~~~mysql
-SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlux,i_extendedness,
-       r_calibFlux,r_extendedness 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 1))=1
-    AND (detect_isPrimary =1
-      AND g_calibFlux >360
-      AND g_extendedness =0
-      AND i_calibFlux >360
-      AND i_extendedness =0
-      AND r_calibFlux >360
-      AND r_extendedness =0)
-
-~~~~
-
-~~~~mysql
-SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
-       (-2.5 * LOG10(r_calibFlux) - (-2.5 * LOG10(i_calibFlux))) AS color_ri,
-       (-2.5 * LOG10(g_calibFlux) + 31.4) AS magnitude_g
-FROM dp02_dc2_catalogs.Object
-WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
-      AND detect_isPrimary = 1
-      AND g_calibFlux > 360
-      AND g_extendedness = 0
-      AND i_calibFlux > 360
-      AND i_extendedness = 0
-      AND r_calibFlux > 360
-      AND r_extendedness = 0
-~~~~
-
-~~~~mysql 
-SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
-       427 AS g_wave,
-       628 AS r_wave,
-       709 AS i_wave
-FROM dp02_dc2_catalogs.Object
-WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
-      AND detect_isPrimary = 1
-      AND g_calibFlux > 360
-      AND g_extendedness = 0
-      AND i_calibFlux > 360
-      AND i_extendedness = 0
-      AND r_calibFlux > 360
-      AND r_extendedness = 0
-~~~~
+In the row limit box, type '5', then click the blue "Search" button.
 
 ~~~~mysql 
 SELECT objectId, coord_ra, coord_dec, detect_isPrimary,
