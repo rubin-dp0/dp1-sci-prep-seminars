@@ -189,12 +189,11 @@ Figure 8: How to add a new column containing the estimated diameter.
 ### 2.9.  Plot the distribution of estimated diameters in log-space.
 Click on the "+" sign in the pop-up window, click on "Add New Chart," select "Histogram", and enter the parameters as below.  
 
-.. figure:: /_static/portal_tut03_step02d.png
-    :width: 400
-    :name: portal_tut03_step02d
-    :alt: screenshot illustrating the plot parameters for displaying the distribution of estimated diameters
+<img src="images/portal_tut03_step02d.png" alt="screenshot illustrating the plot parameters for displaying the distribution of estimated diameters" width="400"/>
 
-    Figure 9: The plot parameters for the distribution of estimated diameters. 
+<!---
+Figure 9: The plot parameters for the distribution of estimated diameters. 
+-->
 
 ### 2.10.  Click on the "OK" button.
 This will result in the plot showing the distribution of estimated diameters.  
