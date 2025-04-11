@@ -21,7 +21,7 @@ Rubin staff will respond to all questions posted there.
  This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
  Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
 
-<img src="images/portal_stellar_cmd_step01_01.png" alt="Default results view." width="400"/>
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
 
 Figure 1: Log into the Portal aspect at the RSP
 
