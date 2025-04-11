@@ -73,7 +73,7 @@ SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux
       AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
 ~~~~
 
-~~~~
+~~~~mysql
 SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlux,i_extendedness,
        r_calibFlux,r_extendedness 
   FROM dp02_dc2_catalogs.Object 
@@ -88,7 +88,7 @@ SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlu
 
 ~~~~
 
-~~~~
+~~~~mysql
 SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
        (-2.5 * LOG10(r_calibFlux) - (-2.5 * LOG10(i_calibFlux))) AS color_ri,
        (-2.5 * LOG10(g_calibFlux) + 31.4) AS magnitude_g
@@ -103,6 +103,21 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
       AND r_extendedness = 0
 ~~~~
 
+~~~~mysql 
+SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
+       427 AS g_wave,
+       628 AS r_wave,
+       709 AS i_wave
+FROM dp02_dc2_catalogs.Object
+WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
+      AND detect_isPrimary = 1
+      AND g_calibFlux > 360
+      AND g_extendedness = 0
+      AND i_calibFlux > 360
+      AND i_extendedness = 0
+      AND r_calibFlux > 360
+      AND r_extendedness = 0
+~~~~
 
 **About the query.**
 
