@@ -198,13 +198,11 @@ Figure 9: The plot parameters for the distribution of estimated diameters.
 ### 2.10.  Click on the "OK" button.
 This will result in the plot showing the distribution of estimated diameters.  
 
-.. figure:: /_static/portal_tut03_step02e.png
-    :width: 600
-    :name: portal_tut03_step02e
-    :alt: screenshot illustrating the distribution of estimated diameters
+<img src="images/portal_tut03_step02e.png" alt="screenshot illustrating the distribution of estimated diameters" width="600"/>
 
-    Figure 10: The distribution of estimated diameters. 
-
+<!---
+Figure 10: The distribution of estimated diameters. 
+-->
 
 ### 2.11. Notice that the tail of the distribution extends to very small diameters.
 This is surprising, as detecting kilometer-sized objects at the distance of Neptune 
