@@ -73,6 +73,20 @@ SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux
       AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
 ~~~~
 
+~~~~
+SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlux,i_extendedness,
+       r_calibFlux,r_extendedness 
+  FROM dp02_dc2_catalogs.Object 
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 1))=1
+    AND (detect_isPrimary =1
+      AND g_calibFlux >360
+      AND g_extendedness =0
+      AND i_calibFlux >360
+      AND i_extendedness =0
+      AND r_calibFlux >360
+      AND r_extendedness =0)
+
+~~~~
 **About the query.**
 
 The query selects 6 columns to be returned from the DP0.2 `Object` table.
