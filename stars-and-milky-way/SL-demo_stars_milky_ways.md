@@ -87,6 +87,23 @@ SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlu
       AND r_extendedness =0)
 
 ~~~~
+
+~~~~
+SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
+       (-2.5 * LOG10(r_calibFlux) - (-2.5 * LOG10(i_calibFlux))) AS color_ri,
+       (-2.5 * LOG10(g_calibFlux) + 31.4) AS magnitude_g
+FROM dp02_dc2_catalogs.Object
+WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
+      AND detect_isPrimary = 1
+      AND g_calibFlux > 360
+      AND g_extendedness = 0
+      AND i_calibFlux > 360
+      AND i_extendedness = 0
+      AND r_calibFlux > 360
+      AND r_extendedness = 0
+~~~~
+
+
 **About the query.**
 
 The query selects 6 columns to be returned from the DP0.2 `Object` table.
