@@ -42,7 +42,7 @@ In this demonstration, an RR Lyrae star is used. This star has coordinates RA, D
 This object has an identifier number ``diaObjectId`` = 1651589610221862935.
 The ``diaObjectId`` for a given coordinate can be obtained from the ``DiaObject`` table by
 making a spatial query on the coordinates with a small radius (a few arcseconds) that returns the ``diaObjectId`` column.
-This is illustrated in Step 1.2.  
+This is illustrated in Step 1.1.2.  
 As is appropriate for steady variable objects (rather than transients such as a supernova), the forced photometry fluxes from PSF model fits in the direct (not difference) images are used.
 
 **This is an introductory-level tutorial, aimed at users who want to get started conducting AGN science.**
@@ -53,7 +53,7 @@ See also the DP0.2 portal tutorials on exploring transient and variable sources,
 
 ## 1. Extract a light curve of a variable object
 
-## 1.1. Prepare and execute the ADQL query.
+## 1.1. Prepare the ADQL query.
 
 ### 1.1.1. Log in to the RSP Portal.
 
@@ -82,13 +82,15 @@ Click "Search" - the resulting table on the bottom will show that the ``diaObjec
 
 Figure 2: the Portal UI interface ready to retrieve the ``diaObjectId``.
 
-### 1.1.3. Navigate to the DP0.2 ADQL interface.
+## 1.2. Execute the ADQL query.
+
+### 1.2.1. Navigate to the DP0.2 ADQL interface.
 
 From the top menu bar, select the "DP0.2 Catalogs" tab.
 
 At upper right, click the toggle to "Edit ADQL".
 
-### 1.1.4. Execute the ADQL query.
+### 1.2.2. Issue the ADQL query.
 
 Copy and paste the following into the ADQL Query box.
 
@@ -126,7 +128,8 @@ The first two columns, date and flux, are plotted on the x- and y-axes of the de
 
 Figure 3: The light curve of the selected variable object, measured in all bands.
 
-**1.2. Plot a single-filter light curve.**
+### 1.2.3. Plot a single-filter light curve.
+
 In the table header, in the "band" column, click on the constraint box and then select "i" in the pop-up window and click "Apply".
 The plot will update to display i-band fluxes only (Figure 4).
 
@@ -134,29 +137,29 @@ The plot will update to display i-band fluxes only (Figure 4).
 
 Figure 4: The light curve of the selected variable object, with only i-band data selected and plotted.
 
-## 2. Extract an image containing a specified location.**
+## 2. Extract an image containing a specified location.
 
-## 2.1. Log in to the Portal Aspect of the Rubin Science Platform.**
+## 2.1. Log in to the Portal Aspect of the Rubin Science Platform.
 In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
 Follow the process to log in.
 
-**2. Select the "DP0.2 Images" tab in the Portal.** 
+## 2.2. Select the "DP0.2 Images" tab in the Portal.
 Click on the "DP0.2 Images" tab at the top to navigate to the DP0.2 image search page, as shown in Figure 1.
 
 .. figure:: /_static/portal-howto-query-image-1.png
     :name: portal_howto_query_image_viaObsTAP-1
     :alt: A screenshot of the DP0.2 image search landing page, annotated with labels.
 
-    Figure 1: A screenshot of the DP0.2 image search landing page, annotated with labels. 
+Figure 5: A screenshot of the DP0.2 image search landing page, annotated with labels. 
 
 
-**3. Set observation type and source (B in Figure 1).** 
+## 2.3. Set observation type and source (B in Figure 5).
 Select IVOA standard "Calibration Level" 2 to retrieve processed visit images (PVIs; also called "calexps") and "lsst.calexp" in the "Data Product Subtype" drop-down menu. 
 
-**4. Set location (C in Figure 1).**
+## 2.4. Set location (C in Figure 5).**
 Choose "Observation boundary contains point" for "Query Type" and enter 61.863, -35.790.
 
-**5. Set timing (D in Figure 1).**
+**5. Set timing (D in Figure 5).**
 Check "Timing", select "Overlapping specified range" for "Time of Observation",
 choose "MJD values", and enter 60000 as the Start Time and 60500 as the End Time.  
 
