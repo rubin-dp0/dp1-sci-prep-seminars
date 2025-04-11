@@ -37,7 +37,7 @@ For more information about the DP0.3 catalogs, tables, and columns, see the :ref
 
 ## Step 1. Identify a population of TNOs
 
-### 1.1. Log into the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
+### 1.1. Log into the Rubin Science Platform at [data.lsst.cloud](https://data.lsst.cloud>) and select the Portal Aspect.
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
 ### 1.2. At upper right, next to "View" choose "Edit ADQL".
@@ -174,7 +174,7 @@ A full review of all TNO sub-populations is beyond the scope of this tutorial.
 ### 2.8.  Estimate the diameters of the objects using their absolute H magnitudes. 
 Where ``H`` is the absolute H magnitude (column ``mpcH``), and ``A`` is the albedo, the diameter :math:`d` 
 in kilometers is :math:`d = 10^{(3.1236 - 0.5 \times log(A) - 0.2 \times H)}`.
-This tutorial adopts an albedo value of 0.15 (as is commonly adopted, e.g., `Vilenius et al. 2012 <https://arxiv.org/pdf/1204.0697.pdf>`_),
+This tutorial adopts an albedo value of 0.15 (as is commonly adopted, e.g., [Vilenius et al. 2012](https://arxiv.org/pdf/1204.0697.pdf),
 with which the expression reduces to :math:`d = 10^{(3.536 - (0.2 \times H))}` km.  
 Click on the "add column" icon.
 Enter ``D`` in the "name" field, ``power(10,(3.536 - 0.2 * mpcH))`` in the expression field, "km" as the units, and "diameter" as the description as below.
