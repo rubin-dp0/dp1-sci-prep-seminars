@@ -1,4 +1,4 @@
-# Stars and Milky Way CMD Demo
+# Stars and Milky Way SED Demo
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -6,9 +6,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-04-11
 
-**Learning objective:** Use the ADQL interface to query for stars, generate a Color Magnitude Diagram.
+**Learning objective:** Use the ADQL interface to query for stars, generate an SED plot for 5 stars.
 
-**LSST data products:** `Object` catalog, `deepCoadd` image
+**LSST data products:** `Object` catalog
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
@@ -17,9 +17,8 @@ Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
- This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
+ This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a photometric SED. 
  This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
- Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
 
 <img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
 
@@ -28,8 +27,8 @@ Figure 1: Log into the Portal aspect at the RSP
 
 **Data Preview 0.2 vs. Data Preview 1**
 
-In the Data Preview 0.2 (DP0.2) simulation there stars are quantized unlike the real data released as Data Preview 1 (DP1).
-Studying CMD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
+In the Data Preview 0.2 (DP0.2) simulation stars are quantized unlike the real data released as Data Preview 1 (DP1).
+Studying photometric SED to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
 However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
