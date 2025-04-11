@@ -25,7 +25,7 @@ field, and LSST can accumulate thousands of observations of those TNOs.
 This tutorial explores the position on the sky of one such TNO (Step 3) and plots time-domain quantities such as magnitude and phase angle (Step 4).  
 Finally, it provides a visualization of its trajectory projected into 2D (see Step 5).  
 
-More information about the LSST DDFs can be found on the `LSST DDF webpage <https://www.lsst.org/scientists/survey-design/ddf>`_
+More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
 and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
 (`PSTN-056 <https://pstn-056.lsst.io/>`_).
 Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
