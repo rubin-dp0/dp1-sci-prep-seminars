@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the ADQL interface to query for stars and generate a Color Magnitude Diagram.
 
-**LSST data products:** `Object` catalog, `deepCoadd` image
+**LSST data products:** `Object` catalog
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
@@ -21,7 +21,7 @@ Rubin staff will respond to all questions posted there.
  This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
  Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
 
-<img src="/images/portal_stellar_cmd_step01_01.png" width="400"/>
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Default results view." width="400"/>
 
 Figure 1: Log into the Portal aspect at the RSP
 
@@ -32,9 +32,6 @@ In the Data Preview 0.2 (DP0.2) simulation there stars are quantized unlike the 
 Studying CMD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
 However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
-
-**This is not an introductory-level tutorial!**
-Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
 **Related tutorials relevant to stellar science.**
 See also the DP0.2 portal tutorials on plotting histograms, light curves, extracting pixel values, and the SAOImage DS9-like functionalities of Firefly.
@@ -61,35 +58,11 @@ At upper right, click the toggle to "Edit ADQL".
 
 Copy and paste the following into the ADQL Query box.
 
-At lower left, click the blue "Search" button.
+At lower left, change the row limit to 10,000, click the blue "Search" button.
 
-~~~~mysql    
-SELECT objectId, coord_dec, coord_ra, g_cModelFlux, r_cModelFlux, i_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62.3, -38.4, 1))=1
-    AND (detect_isPrimary =1 AND refExtendedness =1
-      AND r_cModelFlux <575000 AND r_cModelFlux >91000
-      AND g_cModelFlux >36000 AND i_cModelFlux <575000
-      AND g_cModelFlux < r_cModelFlux AND r_cModelFlux < i_cModelFlux)
-~~~~
 
 ~~~~mysql
-SELECT coord_dec,coord_ra,detect_isPrimary,g_calibFlux,g_extendedness,i_calibFlux,i_extendedness,
-       r_calibFlux,r_extendedness 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 62, -37, 1))=1
-    AND (detect_isPrimary =1
-      AND g_calibFlux >360
-      AND g_extendedness =0
-      AND i_calibFlux >360
-      AND i_extendedness =0
-      AND r_calibFlux >360
-      AND r_extendedness =0)
-
-~~~~
-
-~~~~mysql
-SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
+SELECT objectId, coord_ra, coord_dec, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
        (-2.5 * LOG10(r_calibFlux) - (-2.5 * LOG10(i_calibFlux))) AS color_ri,
        (-2.5 * LOG10(g_calibFlux) + 31.4) AS magnitude_g
 FROM dp02_dc2_catalogs.Object
@@ -103,49 +76,10 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
       AND r_extendedness = 0
 ~~~~
 
-~~~~mysql 
-SELECT coord_dec, coord_ra, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
-       427 AS g_wave,
-       628 AS r_wave,
-       709 AS i_wave
-FROM dp02_dc2_catalogs.Object
-WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
-      AND detect_isPrimary = 1
-      AND g_calibFlux > 360
-      AND g_extendedness = 0
-      AND i_calibFlux > 360
-      AND i_extendedness = 0
-      AND r_calibFlux > 360
-      AND r_extendedness = 0
-~~~~
 
-~~~~mysql 
-SELECT objectId, coord_ra, coord_dec, detect_isPrimary,
-       u_calibFlux, 376 AS u_wave,
-       g_calibFlux, 427 AS g_wave,
-       r_calibFlux, 628 AS r_wave,
-       i_calibFlux, 709 AS i_wave,
-       z_calibFlux, 833 AS z_wave,
-       y_calibFlux, 978 AS y_wave
-FROM dp02_dc2_catalogs.Object
-WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
-      AND detect_isPrimary = 1
-      AND u_calibFlux > 360
-      AND u_extendedness = 0
-      AND g_calibFlux > 360
-      AND g_extendedness = 0
-      AND r_calibFlux > 360
-      AND r_extendedness = 0
-      AND i_calibFlux > 360
-      AND i_extendedness = 0
-      AND z_calibFlux > 360
-      AND z_extendedness = 0
-      AND y_calibFlux > 360
-      AND y_extendedness = 0
-~~~~
 **About the query.**
 
-The query selects 6 columns to be returned from the DP0.2 `Object` table.
+The query selects 10 columns to be returned from the DP0.2 `Object` table and creates two extra columns for (r-i) color and magnitude (g). 
 
 * an object identifier (integer)
 * the coordinates right ascension and declination
@@ -153,30 +87,25 @@ The query selects 6 columns to be returned from the DP0.2 `Object` table.
 
 The query constrains the results to only include rows (objects) that are:
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
+* in the search area (within a 1 degree radius of RA, Dec = 62, -37 deg)
 * not a duplicate or parent object (`detect_isPrimary` = 1)
-* an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+* not an extended object, a point-like source (`refExtendedness` = 0)
+* bright objects in g, r, and i bands (>360 nJy)
 
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
-* The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
-or `cModel` fluxes are used.
 
 ## 2. Choose an extended object.
 
 ### 2.1. Confirm the results view.
 
-The query should have returned 1004 objects.
+The query should have returned 10,000 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
+<img src="execute_ADQL_query_CMD_step01.PNG" alt="Default results view." width="400"/>
 
 Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
