@@ -18,8 +18,7 @@ Rubin staff will respond to all questions posted there.
 ## Introduction
 
  This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
- This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
- Beginner-level users looking for a more general overview of the Portal Aspect should refer to this Introduction to the RSP Portal Aspect.
+ This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation, but has been simplified with an ADQL Query. 
 
 <img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
 
@@ -124,65 +123,13 @@ To generate a CMD we need to alter the coord_ra and coord_dec default plot.
 
 ### 3.1. Click on the gear icon.
 
-Click on the gear icon in the right hand plot.
+Click on the gear icon in the right hand plot. 
+For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the chart title to "Color-magnitude diagram". Change the X Label to "color (r-i)" and
+the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
+Click Apply, then Close.
 
 <img src="images/change_plot_CMD_step03.PNG" alt="Change plot." width="600"/>
 
-Figure 4: Gear icon to change plot parameters.
-
-### 3.2. Alter plot parameters.
-
-For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the chart title to "Color-magnitude diagram". Change the X Label to "color (r-i)" and
-the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
-Click Apply, then Close
-
-<img src="images/screenshot_3.png" alt="Search drop down." width="400"/>
-
-Figure 4: The search drop down menu.
-
-
-### 3.3. Search ObsTAP for images
-
-The default query is a search for any kind of image.
-
-Update the query to only search for deep coadd images.
-
-At left, under "Calibration Level", click the box next to 3, and under "Data Product Subtype" select `lsst.deepCoadd_calexp`.
-
-Click the blue "Search" button at lower left.
-
-<img src="images/screenshot_4.png" alt="Search drop down." width="400"/>
-
-Figure 5: The ObsTAP interface set to search for deep coadd images of the selected object.
-
-
-### 3.4. View the object in the deep coadd image
-
-Twelve deep coadd images, two per LSST filters u, g, r, i, z, and y, are retrieved because deeply coadded images overlap at the edges, and the object was in the overlap zone.
-
-The image that is selected in the table will display in the upper-left panel (the HiPS map is still there in the Coverage tab).
-
-Objects from the first query will be marked on the image.
-
-Zoom in on the object of interest.
-
-<img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
-
-Figure 6: The r-band deep coadd image, zoomed in on the object of interest.
-
-
-## 4. Exercises for the learner.
-
-Feel free to simply play around in the Portal.
-
-The image viewer interface is called "Firefly".
-
-It has a toolbar with functionality such as image scaling, recentering, line cut plots, and so on.
-
-The cutout functionality is still in development.
-
-Click on icons and try the tools.
-
-The button to restore defaults is under the wrench-and-hammer icon.
+Figure 4: Quantized CMD plot from dp0-2 simulation data.
 
 
