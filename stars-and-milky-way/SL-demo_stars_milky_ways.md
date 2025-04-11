@@ -28,16 +28,16 @@ Figure 1: Log into the Portal aspect at the RSP
 
 **Data Preview 0.2 vs. Data Preview 1**
 
-In the Data Preview 0.2 (DP0.2) simulation there are no strongly-lensed objects, like there will be in the real data released as Data Preview 1 (DP1).
-None of the "potential foreground lens" galaxies explored in this tutorial will have any lensed objects nearby.
-Furthermore, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
+In the Data Preview 0.2 (DP0.2) simulation there stars are quantized unlike the real data released as Data Preview 1 (DP1).
+Studying CMD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
+However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
 **This is not an introductory-level tutorial!**
 Find tutorials on the Portal's User Interface, ADQL interface, and the Results Viewer in the [DP0.2 documentation](dp0-2.lsst.io).
 
-**Related tutorials relevant to strong lensing science.**
-See also the DP0.2 portal tutorials on exploring extended object populations, and the SAOImage DS9-like functionalities of Firefly.
+**Related tutorials relevant to stellar science.**
+See also the DP0.2 portal tutorials on plotting histograms, light curves, extracting pixel values, and the SAOImage DS9-like functionalities of Firefly.
 
 ## 1. Execute the ADQL query.
 
