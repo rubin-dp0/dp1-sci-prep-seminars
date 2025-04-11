@@ -140,7 +140,7 @@ Figure 4: The light curve of the selected variable object, with only i-band data
 ## 2. Extract an image containing a specified location.
 
 ## 2.1. Log in to the Portal Aspect of the Rubin Science Platform.
-In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
+If you are not logged in:  in a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
 Follow the process to log in.
 
 ## 2.2. Select the "DP0.2 Images" tab in the Portal.
