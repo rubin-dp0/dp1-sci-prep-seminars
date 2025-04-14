@@ -103,7 +103,7 @@ Details about the object flux measurements:
 
 <img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
 
-Figure 3: Results from SED query.
+Figure 1: Results from SED query.
 
 ## 2. Plot the SED.
 
@@ -119,7 +119,7 @@ Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then
 
 <img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="600"/>
 
-Figure 4: Modify plot - parameters for u-band.
+Figure 1: Modify plot - parameters for u-band.
 
 ### 2.2. Results from altering the plot - u-band filter magnitudes for 5 stars.
 
@@ -128,7 +128,7 @@ and the dots are the same color.
 
 <img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="600"/>
 
-Figure 5: Results of u-band.
+Figure 3: Results of u-band.
 
 
 ### 2.3. Distinguish between stars with rainbow color scale
@@ -137,9 +137,9 @@ Figure 5 shows the required changes.  First, click on 'Trace Options' to open th
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
-<img src="images/SED_results_rainbow_selection.PNG" alt="Search drop down." width="00"/>
+<img src="images/SED_results_rainbow_selection.PNG" alt="Search drop down." width="600"/>
 
-Figure 6: Rainbow colors for each star in u-band.
+Figure 4: Rainbow colors for each star in u-band.
 
 Notice, the lower point in the right hand panel is larger than the other dots.  This point corresponds to the highlight star in the left hand panel.
 
@@ -151,7 +151,12 @@ For X, select 'g_wave' and Y, 'g_calibFlux'. There is no need to alter the title
 the step and the rainbow colors are not applied, just close the plot parameters dialog box and try again, making sure the 'modify trace' option is now selected.
 
 
-<img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
+<img src="images/SED_gband_selection.PNG" alt="Search drop down." width="600"/>
+
+Figure 5: Plot parameters to add g-band fluxes for 5 stars.
+
+
+<img src="images/SED_ugband_plot.PNG" alt="Search drop down." width="600"/>
 
 Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
 
