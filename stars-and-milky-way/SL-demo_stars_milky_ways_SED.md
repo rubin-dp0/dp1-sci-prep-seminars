@@ -126,28 +126,34 @@ Figure 4: Modify plot - parameters for u-band.
 As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
 and the dots are the same color.  
 
-<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="400"/>
+<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="600"/>
 
 Figure 5: Results of u-band.
 
 
 ### 2.3. Distinguish between stars with rainbow color scale
-In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window.
+In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window. Click on the gear icon, notice the top selection is 'Modify Trace'. 
 Figure 5 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
-<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="400"/>
+<img src="images/SED_results_rainbow_selection.PNG" alt="Search drop down." width="00"/>
 
 Figure 6: Rainbow colors for each star in u-band.
 
+Notice, the lower point in the right hand panel is larger than the other dots.  This point corresponds to the highlight star in the left hand panel.
+
 ### 2.4. Add g-band values for 5 stars
 
+Next click the gear icon to open the plot parameter window.  Make sure you click 'Overplot new trace' to add the g-band values, not modify the u-band values.
+For X, select 'g_wave' and Y, 'g_calibFlux'. There is no need to alter the title or axis labels. Click 'Trace Options' to select 'g_calibFlux' in 'Color Map' and
+'Rainbow' for 'Color Scale'. Click 'Apply' and 'Close'. Note: when developing this tutorial, this step would sometimes need to be repeated.  If you complete
+the step and the rainbow colors are not applied, just close the plot parameters dialog box and try again, making sure the 'modify trace' option is now selected.
 
 
 <img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
 
-Figure 6: The r-band deep coadd image, zoomed in on the object of interest.
+Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
 
 
 ## 4. Exercises for the learner.
