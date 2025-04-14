@@ -38,7 +38,7 @@ In a browser, go to the URL [data.lsst.cloud](https://data.lsst.cloud).
 
 Select the Portal Aspect and follow the process to log in.
 
-<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="500"/>
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="600"/>
 
 Figure 1: Log into the Portal aspect at the RSP
 
@@ -52,7 +52,7 @@ Notice also that query constraints can be set up in this table interface.
 
 At upper right, click the toggle to "Edit ADQL".
 
-<img src="images/select_Edit_ADQL_button.png" alt="Portal Edit ADQL button." width="500"/>
+<img src="images/select_Edit_ADQL_button.png" alt="Portal Edit ADQL button." width="600"/>
 
 Figure 2: Click 'Edit ADQL' button.
 
