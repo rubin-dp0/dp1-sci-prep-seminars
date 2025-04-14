@@ -110,7 +110,7 @@ The results view should appear similar to the figure below (panel size ratios or
 
 <img src="images/execute_ADQL_query_CMD.PNG" alt="Default results view." width="400"/>
 
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually (after clicking the
+Figure 3: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually (after clicking the
 coverage tab), or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
 ### 2.2. Change portal view.
@@ -119,7 +119,7 @@ Click on the hamburger icon and scroll to Results Layout. Select Tables and Cove
 
 <img src="images/select_layout_hamburger_icon.png" alt="Change layout." width="600"/>
 
-Figure 3: Location of Results Layout selection.
+Figure 4: Location of Results Layout selection.
 
 ## 3. Plot color vs. magnitude.
 
@@ -131,7 +131,7 @@ Alter the plot parameters so that they match the values in Figure 4. (Written in
 
 <img src="images/plot_CMD_parameters.PNG" alt="Plot parameters." width="300"/>
 
-Figure 4: Parameters to alter the plot.
+Figure 5: Parameters to alter the plot.
 
 
 ### 3.1. Click on the gear icon.
@@ -143,6 +143,6 @@ Click Apply, then Close.
 
 <img src="images/CMD.PNG" alt="Change plot." width="600"/>
 
-Figure 5: Quantized CMD plot from dp0-2 simulation data.
+Figure 6: Quantized CMD plot from dp0-2 simulation data.
 
 
