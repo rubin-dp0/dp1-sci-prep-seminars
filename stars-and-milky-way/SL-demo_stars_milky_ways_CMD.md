@@ -17,17 +17,12 @@ Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
- This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
- This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation, but has been simplified with an ADQL Query. 
-
-<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
-
-Figure 1: Log into the Portal aspect at the RSP
-
+ This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
+ This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation. Please consult that tutorial first if this tutorial is challenging. 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
-In the Data Preview 0.2 (DP0.2) simulation stars are quantized unlike the real data released as Data Preview 1 (DP1).
+In the Data Preview 0.2 (DP0.2) simulation stars are quantized unlike the real data to be released as Data Preview 1 (DP1).
 Studying CMD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
 However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
@@ -43,6 +38,10 @@ In a browser, go to the URL [data.lsst.cloud](https://data.lsst.cloud).
 
 Select the Portal Aspect and follow the process to log in.
 
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
+
+Figure 1: Log into the Portal aspect at the RSP
+
 ### 1.2. Navigate to the DP0.2 ADQL interface.
 
 From the top menu bar, select the "DP0.2 Catalogs" tab.
@@ -52,6 +51,10 @@ Notice that various tables are available in the drop-down menus.
 Notice also that query constraints can be set up in this table interface.
 
 At upper right, click the toggle to "Edit ADQL".
+
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
+
+Figure 2: Edit ADQL button.
 
 ### 1.3. Execute the ADQL query.
 
