@@ -99,6 +99,12 @@ Details about the object flux measurements:
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
 
+### 1.4. Results from the ADQL query.
+
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
+
+Figure 3: Results from SED query.
+
 ## 2. Plot the SED.
 
 Steps required to plot an SED using the portal 'UI assisted' mode is more challenging than the ADQL query above. The query
@@ -111,23 +117,21 @@ and plot SED for five stars.
 Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
 Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
 
-<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
+<img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="600"/>
 
-Figure 3: Modify plot - parameters for u-band.
+Figure 4: Modify plot - parameters for u-band.
 
-### 2.2. Create an image query for the selected object.
+### 2.2. Results from altering the plot - u-band filter magnitudes for 5 stars.
 
-In the table's upper right corner, there are several icons.
+As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
+and the dots are the same color.  In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window.
+Figure 5 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
+Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
+'Rainbow'. 
 
-Hover over the first in the row, and the pop-up "Search drop down: search based on table" will appear.
+<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="400"/>
 
-Click the icon to see the search drop down menu.
-
-Click on "Search ObsTAP for images at row".
-
-<img src="images/screenshot_3.png" alt="Search drop down." width="400"/>
-
-Figure 4: The search drop down menu.
+Figure 5: Select colors for individual stars.
 
 
 ### 3.3. Search ObsTAP for images
