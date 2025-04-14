@@ -117,16 +117,22 @@ coverage tab), or in [HEALPix](https://sourceforge.net/projects/healpix/) region
 
 Click on the hamburger icon and scroll to Results Layout. Select Tables and Coverage Image Charts. 
 
-<img src="images/select_layout_CMD_step02.PNG" alt="Alter layout." width="600"/>
+<img src="images/select_layout_hamburger_icon.PNG" alt="Alter layout." width="600"/>
 
 Figure 3: Location of Results Layout selection.
 
 ## 3. Plot color vs. magnitude.
 
-The ADQL query returned colors for g, r, and i filters for each of the 10,000 stars discovered in step 1.
-To generate a CMD we need to alter the coord_ra and coord_dec default plot. 
+The ADQL query returned colors for g, r, and i filters for each of the 10,000 stars discovered in step 1 and two additional
+columns were included for the color (r-i) and magnitude (g). Adding those commands simplifies the steps required to plot the CMD.
 
-ADD INTERMEDIATE INSTRUCTIONS AND IMAGES
+In the right panel, click the 'Active Chart' tab to alter the plot. Click the gear icon in the upper right portion of the panel.  
+Alter the plot parameters so that they match the values in Figure 4. 
+
+<img src="images/select_layout_hamburger_icon.PNG" alt="Alter layout." width="600"/>
+
+Figure 4: Parameters to alter the plot.
+
 
 ### 3.1. Click on the gear icon.
 
