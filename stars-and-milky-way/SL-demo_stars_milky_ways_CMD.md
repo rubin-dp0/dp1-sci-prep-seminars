@@ -4,7 +4,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP0
 
-**Last verified to run:** 2025-04-11
+**Last verified to run:** 2025-04-14
 
 **Learning objective:** Use the ADQL interface to query for stars and generate a Color Magnitude Diagram.
 
@@ -18,7 +18,7 @@ Rubin staff will respond to all questions posted there.
 ## Introduction
 
  This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
- This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation. Please consult that tutorial first if this tutorial is challenging. 
+ This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation. Please consult that tutorial if this tutorial is challenging. 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
