@@ -108,9 +108,10 @@ The query should have returned 10,000 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/execute_ADQL_query_CMD_step01.PNG" alt="Default results view." width="600"/>
+<img src="images/execute_ADQL_query_CMD.PNG" alt="Default results view." width="600"/>
 
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually (after clicking the
+coverage tab), or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
 
 ### 2.2. Change portal view.
 
