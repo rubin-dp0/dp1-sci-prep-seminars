@@ -85,14 +85,14 @@ The query creates 18 columns to be returned from the DP0.2 `Object` table.
 * an object identifier (integer)
 * the coordinates right ascension and declination
 * object flux measurements in the u, g, r, i, z, and y filters
-* adds columns for filter wavelengths, this will simplify plotting the SED in the portal
+* adds columns for filter wavelengths, this will simplify plotting the SED
 
 The query constrains the results to only include rows (objects) that are:
 
 * in the search area (within a 1 degree radius of RA, Dec = 62, -37 deg)
 * not a duplicate or parent object (`detect_isPrimary` = 1)
 * an not extended object, a point-like source (`refExtendedness` = 0)
-* bright in all band (band_calibFlux > 360)
+* bright in all bands (band_calibFlux > 360)
 
 Details about the object flux measurements:
 
@@ -107,29 +107,23 @@ The query should have returned 1004 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="400"/>
 
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+Figure 2: The results view after running the query. (Note: in this image the results presented are the data table for 5 stars and a plot of ra/dec of each of those
+stars. This query was run directly after the CMD tutorial and the results view is still in the Table/Coverag-Image-Charts selection.)
 
-### 2.2. Select an object.
 
-Large scale clustering of the bright red extended objects can be seen in the active chart.
+## 3. Plot the SED.
 
-Click on any point in one of the clumps, and it will be highlighted in all three panels.
+Plotting a SED in the portal using the ADQL query above is easy, but still requires a few steps.
 
-In the coverage map at upper left, zoom in on the selected point in the HiPS map.
+### 3.1. Click on the gear icon.
 
-<img src="images/screenshot_2.png" alt="Zoom in one one interesting galaxy." width="400"/>
+Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, 
 
-Figure 3: The results view after selecting an object and zooming in on the coverage chart.
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="400"/>
 
-## 3. View the object in the deep coadd.
-
-The HiPS maps are intended for quicklook and data discovery, not scientific analysis, but the corresponding `deepCoadd` images can be retrieved.
-
-### 3.1. Select the object in the table.
-
-Click the box in the leftmost column of the table to select the row.
+Figure 3: Modify plot - parameters for u-band.
 
 ### 3.2. Create an image query for the selected object.
 
