@@ -129,7 +129,7 @@ columns were included for the color (r-i) and magnitude (g). Adding those comman
 In the right panel, click the 'Active Chart' tab to alter the plot. Click the gear icon in the upper right portion of the panel.  
 Alter the plot parameters so that they match the values in Figure 4. 
 
-<img src="images/select_layout_hamburger_icon.PNG" alt="Alter layout." width="600"/>
+<img src="images/plot_CMD_parameters.PNG" alt="Alter layout." width="600"/>
 
 Figure 4: Parameters to alter the plot.
 
