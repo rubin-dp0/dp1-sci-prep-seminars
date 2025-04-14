@@ -123,8 +123,8 @@ Figure 4: Location of Results Layout selection.
 
 ## 3. Plot color vs. magnitude.
 
-The ADQL query returned colors for g, r, and i filters for each of the 10,000 stars discovered in step 1 and two additional
-columns were included for the color (r-i) and magnitude (g). Adding those commands simplifies the steps required to plot the CMD.
+The ADQL query returned flux magnitudes for g, r, and i filters for each of the 10,000 stars discovered in step 1 and two additional
+columns were created for the color (r-i) and magnitude (g). Adding those commands simplifies the steps required to plot the CMD.
 
 In the right panel, click the 'Active Chart' tab to alter the plot. Click the gear icon in the upper right portion of the panel.  
 Alter the plot parameters so that they match the values in Figure 4. (Written instructions in step 3.1 below). 
