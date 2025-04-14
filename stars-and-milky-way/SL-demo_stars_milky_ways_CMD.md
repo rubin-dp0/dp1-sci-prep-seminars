@@ -38,7 +38,7 @@ In a browser, go to the URL [data.lsst.cloud](https://data.lsst.cloud).
 
 Select the Portal Aspect and follow the process to log in.
 
-<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
+<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="500"/>
 
 Figure 1: Log into the Portal aspect at the RSP
 
@@ -52,7 +52,7 @@ Notice also that query constraints can be set up in this table interface.
 
 At upper right, click the toggle to "Edit ADQL".
 
-<img src="images/select_Edit_ADQL_button.png" alt="Portal Edit ADQL button." width="400"/>
+<img src="images/select_Edit_ADQL_button.png" alt="Portal Edit ADQL button." width="500"/>
 
 Figure 2: Click 'Edit ADQL' button.
 
@@ -127,9 +127,9 @@ The ADQL query returned colors for g, r, and i filters for each of the 10,000 st
 columns were included for the color (r-i) and magnitude (g). Adding those commands simplifies the steps required to plot the CMD.
 
 In the right panel, click the 'Active Chart' tab to alter the plot. Click the gear icon in the upper right portion of the panel.  
-Alter the plot parameters so that they match the values in Figure 4. 
+Alter the plot parameters so that they match the values in Figure 4. (Written instructions in step 3.1 below). 
 
-<img src="images/plot_CMD_parameters.PNG" alt="Plot parameters." width="600"/>
+<img src="images/plot_CMD_parameters.PNG" alt="Plot parameters." width="300"/>
 
 Figure 4: Parameters to alter the plot.
 
@@ -141,8 +141,8 @@ For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the 
 the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
 Click Apply, then Close.
 
-<img src="images/change_plot_CMD_step03.PNG" alt="Change plot." width="600"/>
+<img src="images/CMD.PNG" alt="Change plot." width="600"/>
 
-Figure 4: Quantized CMD plot from dp0-2 simulation data.
+Figure 5: Quantized CMD plot from dp0-2 simulation data.
 
 
