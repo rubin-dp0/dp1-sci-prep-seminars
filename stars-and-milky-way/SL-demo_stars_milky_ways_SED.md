@@ -17,13 +17,8 @@ Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
- This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a photometric SED. 
- This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
-
-<img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
-
-Figure 1: Log into the Portal aspect at the RSP
-
+This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a photometric SED. 
+ 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
@@ -85,28 +80,24 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
 ~~~~
 **About the query.**
 
-The query selects 6 columns to be returned from the DP0.2 `Object` table.
+The query creates 18 columns to be returned from the DP0.2 `Object` table.
 
 * an object identifier (integer)
 * the coordinates right ascension and declination
-* object flux measurements in the g, r, and i filters
+* object flux measurements in the u, g, r, i, z, and y filters
+* adds columns for filter wavelengths, this will simplify plotting the SED in the portal
 
 The query constrains the results to only include rows (objects) that are:
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
+* in the search area (within a 1 degree radius of RA, Dec = 62, -37 deg)
 * not a duplicate or parent object (`detect_isPrimary` = 1)
-* an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+* an not extended object, a point-like source (`refExtendedness` = 0)
+* bright in all band (band_calibFlux > 360)
 
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
-* The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
-or `cModel` fluxes are used.
 
 ## 2. Choose an extended object.
 
