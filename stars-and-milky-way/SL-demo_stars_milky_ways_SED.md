@@ -124,40 +124,26 @@ Figure 4: Modify plot - parameters for u-band.
 ### 2.2. Results from altering the plot - u-band filter magnitudes for 5 stars.
 
 As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
-and the dots are the same color.  In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window.
+and the dots are the same color.  
+
+<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="400"/>
+
+Figure 5: Results of u-band.
+
+
+### 2.3. Distinguish between stars with rainbow color scale
+In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window.
 Figure 5 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
 <img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="Search drop down." width="400"/>
 
-Figure 5: Select colors for individual stars.
+Figure 6: Rainbow colors for each star in u-band.
+
+### 2.4. Add g-band values for 5 stars
 
 
-### 3.3. Search ObsTAP for images
-
-The default query is a search for any kind of image.
-
-Update the query to only search for deep coadd images.
-
-At left, under "Calibration Level", click the box next to 3, and under "Data Product Subtype" select `lsst.deepCoadd_calexp`.
-
-Click the blue "Search" button at lower left.
-
-<img src="images/screenshot_4.png" alt="Search drop down." width="400"/>
-
-Figure 5: The ObsTAP interface set to search for deep coadd images of the selected object.
-
-
-### 3.4. View the object in the deep coadd image
-
-Twelve deep coadd images, two per LSST filters u, g, r, i, z, and y, are retrieved because deeply coadded images overlap at the edges, and the object was in the overlap zone.
-
-The image that is selected in the table will display in the upper-left panel (the HiPS map is still there in the Coverage tab).
-
-Objects from the first query will be marked on the image.
-
-Zoom in on the object of interest.
 
 <img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
 
