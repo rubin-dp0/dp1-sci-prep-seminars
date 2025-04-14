@@ -52,9 +52,9 @@ Notice also that query constraints can be set up in this table interface.
 
 At upper right, click the toggle to "Edit ADQL".
 
-<img src="images/portal_stellar_cmd_step01_01.png" alt="Portal." width="400"/>
+<img src="images/select_Edit_ADQL_button.png" alt="Portal Edit ADQL button." width="400"/>
 
-Figure 2: Edit ADQL button.
+Figure 2: Click 'Edit ADQL' button.
 
 ### 1.3. Execute the ADQL query.
 
@@ -86,6 +86,7 @@ The query selects 10 columns to be returned from the DP0.2 `Object` table and cr
 * an object identifier (integer)
 * the coordinates right ascension and declination
 * object flux measurements in the g, r, and i filters
+* two columns created are color r-i and magnitude g
 
 The query constrains the results to only include rows (objects) that are:
 
