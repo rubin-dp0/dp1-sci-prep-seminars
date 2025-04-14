@@ -99,25 +99,14 @@ Details about the object flux measurements:
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
 
-## 2. Choose an extended object.
+## 2. Plot the SED.
 
-### 2.1. Confirm the results view.
+Steps required to plot an SED using the portal 'UI assisted' mode is more challenging than the ADQL query above. The query
+provides the structure needed to generate an SED, but there are a number of additional steps required.  Specifically, when generating a simple plot with this data,
+the results will be of all five stars in u-band rather than an SED of a single star. The steps below will show how to overcome this issue
+and plot SED for five stars.
 
-The query should have returned 1004 objects.
-
-The results view should appear similar to the figure below (panel size ratios or colors may differ).
-
-<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
-
-Figure 2: The results view after running the query. (Note: in this image the results presented are the data table for 5 stars and a plot of ra/dec of each of those
-stars. This query was run directly after the CMD tutorial and the results view is still in the Table/Coverag-Image-Charts selection.)
-
-
-## 3. Plot the SED.
-
-Plotting a SED in the portal using the ADQL query above is easy, but still requires a few steps.
-
-### 3.1. Click on the gear icon.
+### 2.1. Click on the gear icon.
 
 Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
 Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
@@ -126,7 +115,7 @@ Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then
 
 Figure 3: Modify plot - parameters for u-band.
 
-### 3.2. Create an image query for the selected object.
+### 2.2. Create an image query for the selected object.
 
 In the table's upper right corner, there are several icons.
 
