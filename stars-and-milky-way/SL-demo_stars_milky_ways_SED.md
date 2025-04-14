@@ -107,7 +107,7 @@ The query should have returned 1004 objects.
 
 The results view should appear similar to the figure below (panel size ratios or colors may differ).
 
-<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="400"/>
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
 
 Figure 2: The results view after running the query. (Note: in this image the results presented are the data table for 5 stars and a plot of ra/dec of each of those
 stars. This query was run directly after the CMD tutorial and the results view is still in the Table/Coverag-Image-Charts selection.)
@@ -119,9 +119,10 @@ Plotting a SED in the portal using the ADQL query above is easy, but still requi
 
 ### 3.1. Click on the gear icon.
 
-Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, 
+Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
+Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
 
-<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="400"/>
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
 
 Figure 3: Modify plot - parameters for u-band.
 
