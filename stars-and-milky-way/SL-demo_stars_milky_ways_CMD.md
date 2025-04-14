@@ -127,19 +127,21 @@ The ADQL query returned flux magnitudes for g, r, and i filters for each of the 
 columns were created for the color (r-i) and magnitude (g). Adding those commands simplifies the steps required to plot the CMD.
 
 In the right panel, click the 'Active Chart' tab to switch between the 'coverage' (the sky map) and the plot of the 10,000 stars ra and dec. 
-Click the gear icon in the upper right portion of the panel and alter the plot parameters so that they match the values in Figure 4. (Written instructions in step 3.1 below). 
+Click the gear icon in the upper right portion of the panel and alter the plot parameters. 
+
+For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the chart title to "Color-magnitude diagram". Change the X Label to "color (r-i)" and
+the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
+Click Apply, then Close.
 
 <img src="images/plot_CMD_parameters.PNG" alt="Plot parameters." width="400"/>
 
 Figure 5: Parameters to alter the plot.
 
 
-### 3.1. Click on the gear icon.
+### 3.1. Results.
 
-Click on the gear icon in the right hand plot. 
-For the x-axis, select color_ri. For the y-axis, select magnitude_g. Change the chart title to "Color-magnitude diagram". Change the X Label to "color (r-i)" and
-the Y Label to "magnitude (g), then click the reverse box under the Y Label. Finally, add the X Min, X Max values to "-0.5, 2.0" and the Y Min, Y Max values to "16.5 and 25.5". 
-Click Apply, then Close.
+Data Preview 0.2 0.1 Bright Stars color magnitude diagram (beginner) portal tutorial will provide a similar CMD. Use that tutorial get step-by-step
+instructions to create the plot. Use or alter the ADQL query in this tutorial to get a quick look at a CMD.
 
 <img src="images/CMD.PNG" alt="Change plot." width="600"/>
 
