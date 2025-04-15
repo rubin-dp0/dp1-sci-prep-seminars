@@ -137,7 +137,7 @@ Figure 5 shows the required changes.  First, click on 'Trace Options' to open th
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
-<img src="images/SED_uband_rainbow_colors_selected.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
+<img src="images/SED_parameters_uband_rainbow.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
 
 Figure 4: Change u-band information to rainbow to distinguish stars.
 
