@@ -137,9 +137,13 @@ Figure 5 shows the required changes.  First, click on 'Trace Options' to open th
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
+<img src="images/SED_uband_rainbow_colors_selection.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
+
+Figure 4: Change u-band information to rainbow to distinguish stars.
+
 <img src="images/SED_results_rainbow_selection.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
 
-Figure 4: Rainbow colors for each star in u-band.
+Figure 5: Rainbow colors for each star in u-band.
 
 Notice, the lower point in the right hand panel is larger than the other dots.  This point corresponds to the highlight star in the left hand panel.
 
@@ -153,12 +157,12 @@ the step and the rainbow colors are not applied, just close the plot parameters 
 
 <img src="images/SED_gband_selection.PNG" alt="Plot parameters for g-band." width="500"/>
 
-Figure 5: Plot parameters to add g-band fluxes for 5 stars.
+Figure 6: Plot parameters to add g-band fluxes for 5 stars.
 
 
 <img src="images/SED_ugband_plot.PNG" alt="U and G band values." width="700"/>
 
-Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
+Figure 7: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
 
 
 ### 2.4. Add r, i, y, and z-band values for 5 stars
@@ -167,4 +171,4 @@ Continue in the same fashion to add the remaining filter bands.
 
 <img src="images/SED_allbands.PNG" alt="Search drop down." width="700"/>
 
-Figure 7: Sample photometric SED for 5 stars.
+Figure 8: Sample photometric SED for 5 stars.
