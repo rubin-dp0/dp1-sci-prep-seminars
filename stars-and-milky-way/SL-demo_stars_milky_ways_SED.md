@@ -167,4 +167,4 @@ Continue in the same fashion to add the remaining filter bands.
 
 <img src="images/SED_allbands.PNG" alt="Search drop down." width="700"/>
 
-Figure 7: Photometric SED for 5 stars.
+Figure 7: Sample photometric SED for 5 stars.
