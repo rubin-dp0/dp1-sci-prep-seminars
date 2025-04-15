@@ -182,27 +182,3 @@ The query returns seven u-band PVIs that meet all the constraints specified in S
 <img src="images/AGN_Image_4.png" alt="AGN Image 4." width="800"/>
 
 Figure 8: A screenshot displaying the image query results, showing seven u-band PVIs.
-
-
-## 3. Optional:  Color markers by band in a multi-band light curve.
-First, perform all steps in Sec. 1.2 above to generate the light curve.  
-To set marker color based on band (filter), create a new column in which the band is represented as a number (Figure 9) and then a color map based on those numbers (Figure 10).
-The plot will then display points colored by band (Figure 11).
-
-<img src="images/AGN_Lightcurve_5.png" alt="AGN Lightcurve 5." width="400"/>
-
-Figure 9: The "Add a column" pop-up window to create a new column of integer numbers to represent each band.
-
-<img src="images/AGN_Lightcurve_6.png" alt="AGN Lightcurve 6." width="400"/>
-
-Figure 10: The "Plot Parameters" pop-up window with the Trace Options set to define a color map based on the new "bands_ascii" column.
-
-<img src="images/AGN_Lightcurve_7.png" alt="AGN Lightcurve 7." width="800"/>
-
-Figure 11: The results view with the new "bands_ascii" column and the plotted points colored by the Rainbow color map.
-
-
-**Notice:**
-In the future, the trick of creating an ascii column to represent band as an integer will not be needed.
-The development of Portal functionality to plot multi-band light curves in which points are colored by filter is planned.
-
