@@ -101,7 +101,7 @@ Details about the object flux measurements:
 
 ### 1.4. Results from the ADQL query.
 
-<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="600"/>
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="700"/>
 
 Figure 1: Results from SED query.
 
@@ -117,7 +117,7 @@ and plot SED for five stars.
 Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
 Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
 
-<img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="600"/>
+<img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="500"/>
 
 Figure 1: Modify plot - parameters for u-band.
 
@@ -126,7 +126,7 @@ Figure 1: Modify plot - parameters for u-band.
 As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
 and the dots are the same color.  
 
-<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="U band results prior to rainbow colors." width="600"/>
+<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="U band results prior to rainbow colors." width="700"/>
 
 Figure 3: Results of u-band.
 
@@ -137,7 +137,7 @@ Figure 5 shows the required changes.  First, click on 'Trace Options' to open th
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
-<img src="images/SED_results_rainbow_selection.PNG" alt="Rainbow colors to distinguish stars." width="600"/>
+<img src="images/SED_results_rainbow_selection.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
 
 Figure 4: Rainbow colors for each star in u-band.
 
@@ -151,12 +151,12 @@ For X, select 'g_wave' and Y, 'g_calibFlux'. There is no need to alter the title
 the step and the rainbow colors are not applied, just close the plot parameters dialog box and try again, making sure the 'modify trace' option is now selected.
 
 
-<img src="images/SED_gband_selection.PNG" alt="Plot parameters for g-band." width="600"/>
+<img src="images/SED_gband_selection.PNG" alt="Plot parameters for g-band." width="500"/>
 
 Figure 5: Plot parameters to add g-band fluxes for 5 stars.
 
 
-<img src="images/SED_ugband_plot.PNG" alt="U and G band values." width="600"/>
+<img src="images/SED_ugband_plot.PNG" alt="U and G band values." width="700"/>
 
 Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
 
@@ -165,6 +165,6 @@ Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wave
 Continue in the same fashion to add the remaining filter bands.
 
 
-<img src="images/SED_allbands.PNG" alt="Search drop down." width="600"/>
+<img src="images/SED_allbands.PNG" alt="Search drop down." width="700"/>
 
 Figure 7: Photometric SED for 5 stars.
