@@ -165,6 +165,6 @@ Figure 6: u- and g-band values for 5 stars plotted against u- and g- filter wave
 Continue in the same fashion to add the remaining filter bands.
 
 
-<img src="images/SED_ugband_plot.PNG" alt="Search drop down." width="600"/>
+<img src="images/SED_allbands.PNG" alt="Search drop down." width="600"/>
 
 Figure 7: Photometric SED for 5 stars.
