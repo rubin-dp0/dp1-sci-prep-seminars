@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the ADQL interface to extract multi-band photometry of a variable object
 
-**LSST data products:** `Object` catalog, `deepCoadd` image
+**LSST data products:** `Object` catalog, `calexp` calibrated exposure image (also known as Processed Visit Image, or `PVI`)
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
