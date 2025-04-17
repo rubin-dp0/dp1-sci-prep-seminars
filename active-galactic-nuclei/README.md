@@ -18,6 +18,9 @@ The [slide deck](https://docs.google.com/presentation/d/1BI8HWC6y8ImZjqMy703Cmmr
 
 ### Jupyter Notebook Tutorial
 
-To be added
+`science_seminar_AGN_Demo`
 
-* Based on DP0.2 tutorial notebooks 07a and 07b.
+* Plot a lightcurve for a known variable star
+* Investigate Lomb-Scargle periodograms and Structure Functions
+* Query lightcurve summary statistics
+* Plot color-color diagrams
