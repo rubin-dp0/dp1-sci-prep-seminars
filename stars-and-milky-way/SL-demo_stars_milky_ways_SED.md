@@ -1,4 +1,4 @@
-# Stars and Milky Way SED Demo
+# Stars and Milky Way Photometric SED Demo
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -17,13 +17,8 @@ Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
- This tutorial uses the Single-Table Query interface to search for bright stars in a small region of sky, and then uses the Results interface to create a photometric SED. 
- This is the same demonstration used to illustrate the Table Access Protocol (TAP) service in the first of the Notebook tutorials. 
-
-<img src="images/lensing_mock_pink_blue.png" alt="Lensing infographic." width="400"/>
-
-Figure 1: Log into the Portal aspect at the RSP
-
+This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a photometric SED. 
+ 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
@@ -85,118 +80,95 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
 ~~~~
 **About the query.**
 
-The query selects 6 columns to be returned from the DP0.2 `Object` table.
+The query creates 18 columns to be returned from the DP0.2 `Object` table.
 
 * an object identifier (integer)
 * the coordinates right ascension and declination
-* object flux measurements in the g, r, and i filters
+* object flux measurements in the u, g, r, i, z, and y filters
+* adds columns for filter wavelengths, this will simplify plotting the SED
 
 The query constrains the results to only include rows (objects) that are:
 
-* in the search area (within a 1 degree radius of RA, Dec = 62.3, -38.4 deg)
+* in the search area (within a 1 degree radius of RA, Dec = 62, -37 deg)
 * not a duplicate or parent object (`detect_isPrimary` = 1)
-* an extended object, not a point-like source (`refExtendedness` = 1)
-* bright in r-band ($17 < r < 19$ mag)
-* not faint in g-band ($g < 20$ mag)
-* not near LSST saturation in i-band ($17 > i$ mag)
-* red; is brighter in successively redder filters ($i < r < g$ mag
+* an not extended object, a point-like source (`refExtendedness` = 0)
+* bright in all bands (band_calibFlux > 360)
 
 Details about the object flux measurements:
 
 * Photometric measurements are stored as fluxes in the tables, not magnitudes.
 * `Object` table fluxes are in nJy, and the conversion is: $m = -2.5\log(f) + 31.4$.
-* The SDSS [Composite Model Magnitudes](https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel)
-or `cModel` fluxes are used.
 
-## 2. Choose an extended object.
+### 1.4. Results from the ADQL query.
 
-### 2.1. Confirm the results view.
+<img src="images/SED_returned_ADQL_query.PNG" alt="Results of ADQL query." width="700"/>
 
-The query should have returned 1004 objects.
+Figure 1: Results from SED query.
 
-The results view should appear similar to the figure below (panel size ratios or colors may differ).
+## 2. Plot the SED.
 
-<img src="images/screenshot_1.png" alt="Default results view." width="400"/>
+Steps required to plot an SED using the portal 'UI assisted' mode is more challenging than the ADQL query above. The query
+provides the structure needed to generate an SED, but there are a number of additional steps required.  Specifically, when generating a simple plot with this data,
+the results will be of all five stars in u-band rather than an SED of a single star. The steps below will show how to overcome this issue
+and plot SED for five stars.
 
-Figure 2: The default results view after running the query. At upper left, the [HiPS](https://aladin.cds.unistra.fr/hips/) coverage map with returned objects marked individually, or in [HEALPix](https://sourceforge.net/projects/healpix/) regions (diamonds). At upper right, the active chart plots 2 columns by default. Below is the table of returned data.
+### 2.1. Click on the gear icon.
 
-### 2.2. Select an object.
+Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
+Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
 
-Large scale clustering of the bright red extended objects can be seen in the active chart.
+<img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="500"/>
 
-Click on any point in one of the clumps, and it will be highlighted in all three panels.
+Figure 1: Modify plot - parameters for u-band.
 
-In the coverage map at upper left, zoom in on the selected point in the HiPS map.
+### 2.2. Results from altering the plot - u-band filter magnitudes for 5 stars.
 
-<img src="images/screenshot_2.png" alt="Zoom in one one interesting galaxy." width="400"/>
+As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
+and the dots are the same color.  
 
-Figure 3: The results view after selecting an object and zooming in on the coverage chart.
+<img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="U band results prior to rainbow colors." width="700"/>
 
-## 3. View the object in the deep coadd.
-
-The HiPS maps are intended for quicklook and data discovery, not scientific analysis, but the corresponding `deepCoadd` images can be retrieved.
-
-### 3.1. Select the object in the table.
-
-Click the box in the leftmost column of the table to select the row.
-
-### 3.2. Create an image query for the selected object.
-
-In the table's upper right corner, there are several icons.
-
-Hover over the first in the row, and the pop-up "Search drop down: search based on table" will appear.
-
-Click the icon to see the search drop down menu.
-
-Click on "Search ObsTAP for images at row".
-
-<img src="images/screenshot_3.png" alt="Search drop down." width="400"/>
-
-Figure 4: The search drop down menu.
+Figure 3: Results of u-band.
 
 
-### 3.3. Search ObsTAP for images
+### 2.3. Distinguish between stars with rainbow color scale
+In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window. Click on the gear icon, notice the top selection is 'Modify Trace'. 
+Figure 5 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
+Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
+'Rainbow'. 
 
-The default query is a search for any kind of image.
+<img src="images/SED_parameters_uband_rainbow.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
 
-Update the query to only search for deep coadd images.
+Figure 4: Change u-band information to rainbow to distinguish stars.
 
-At left, under "Calibration Level", click the box next to 3, and under "Data Product Subtype" select `lsst.deepCoadd_calexp`.
+<img src="images/SED_results_rainbow_selection.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
 
-Click the blue "Search" button at lower left.
+Figure 5: Rainbow colors for each star in u-band.
 
-<img src="images/screenshot_4.png" alt="Search drop down." width="400"/>
+Notice, the lower point in the right hand panel is larger than the other dots.  This point corresponds to the highlight star in the left hand panel.
 
-Figure 5: The ObsTAP interface set to search for deep coadd images of the selected object.
+### 2.4. Add g-band values for 5 stars
 
-
-### 3.4. View the object in the deep coadd image
-
-Twelve deep coadd images, two per LSST filters u, g, r, i, z, and y, are retrieved because deeply coadded images overlap at the edges, and the object was in the overlap zone.
-
-The image that is selected in the table will display in the upper-left panel (the HiPS map is still there in the Coverage tab).
-
-Objects from the first query will be marked on the image.
-
-Zoom in on the object of interest.
-
-<img src="images/screenshot_5.png" alt="Search drop down." width="400"/>
-
-Figure 6: The r-band deep coadd image, zoomed in on the object of interest.
+Next click the gear icon to open the plot parameter window.  Make sure you click 'Overplot new trace' to add the g-band values, not modify the u-band values.
+For X, select 'g_wave' and Y, 'g_calibFlux'. There is no need to alter the title or axis labels. Click 'Trace Options' to select 'g_calibFlux' in 'Color Map' and
+'Rainbow' for 'Color Scale'. Click 'Apply' and 'Close'. Note: when developing this tutorial, this step would sometimes need to be repeated.  If you complete
+the step and the rainbow colors are not applied, just close the plot parameters dialog box and try again, making sure the 'modify trace' option is now selected.
 
 
-## 4. Exercises for the learner.
+<img src="images/SED_gband_selection.PNG" alt="Plot parameters for g-band." width="500"/>
 
-Feel free to simply play around in the Portal.
-
-The image viewer interface is called "Firefly".
-
-It has a toolbar with functionality such as image scaling, recentering, line cut plots, and so on.
-
-The cutout functionality is still in development.
-
-Click on icons and try the tools.
-
-The button to restore defaults is under the wrench-and-hammer icon.
+Figure 6: Plot parameters to add g-band fluxes for 5 stars.
 
 
+<img src="images/SED_ugband_plot.PNG" alt="U and G band values." width="700"/>
+
+Figure 7: u- and g-band values for 5 stars plotted against u- and g- filter wavelengths.
+
+
+### 2.4. Add r, i, y, and z-band values for 5 stars
+Continue in the same fashion to add the remaining filter bands.
+
+
+<img src="images/SED_allbands.PNG" alt="Search drop down." width="700"/>
+
+Figure 8: Sample photometric SED for 5 stars.

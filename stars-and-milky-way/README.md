@@ -6,7 +6,7 @@ Yumi Choi, Tina Adair
 
 ## Slides
 
-(link to be added here)
+The [slide deck](https://docs.google.com/presentation/d/1aMlvluxAPSva26sxD92DLq6Anosk00a4AWdo7nPokus/edit?usp=sharing) is view-only.
 
 ## Tutorial
 
