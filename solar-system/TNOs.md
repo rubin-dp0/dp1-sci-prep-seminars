@@ -17,7 +17,7 @@ orbit's eccentricity (``e``) and perihelion distance (``q``), which are both ava
 
 Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky. 
 
-This demo uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
+This demo uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the [DP0.3 Data Products Definition Document](https://dp0-3.lsst.io/data-products-dp0-3/index.html#dp0-3-data-products-definition-document-dpdd).
 
 ## Step 1. Identify a population of TNOs
 
