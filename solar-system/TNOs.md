@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This tutorial demonstrates how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
+This demo shows how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
 TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputne (``a`` > 30.1 AU).
 The DP0.3 simulated data set does not include the semimajor axis (``a``) in the ``MPCORB`` table, however it can be derived from the 
 orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 - ``e``). 
