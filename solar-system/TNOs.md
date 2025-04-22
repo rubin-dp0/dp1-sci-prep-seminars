@@ -177,7 +177,5 @@ Figure 10: The distribution of estimated diameters.
 
 ### 2.11. Notice that the tail of the distribution extends to very small diameters.
 This is surprising, as detecting kilometer-sized objects at the distance of Neptune 
-should be quite challenging.
-This illustrates, in part, some of the shortcomings of the assumptions (such as albedo)
-which were used to estimate the diameters.
-See also the first exercise for the learner in Step 6.
+should be quite challenging. This illustrates, in part, some of the shortcomings of the assumptions (such as albedo)
+which were used to estimate the diameters. See DP0.3 portal tutorial 03 for a continuation of this TNO exploration.
