@@ -117,14 +117,10 @@ The default plot in the results view will be a heatmap of inclination vs. eccent
 
 ### 2.4.  Plot the eccentricity of the orbit ``e`` as a function of the semimajor axis ``a``.  
 This time (in contrast to Step 1.6 but accomplishing the same goal), calculate ``a`` from ``e`` and ``q`` via 
-setting appropriate plot parameters rather than creating another column in the right-hand table.  
-Start by clicking on the "+" sign on the left-hand panel to add a new chart.  
+setting appropriate plot parameters rather than creating another column in the right-hand table. Start by clicking on the "+" sign on the left-hand panel to add a new chart.  
 
 ### 2.5. In the "Add New Chart" pop-up window, select "Scatter" for the plot type.
-Enter "q/(1.0-e)" for the X-axis, and "e" for the y-axis.  
-Increase the number of bins to 200 for both x and y to improve the resolution of the heatmap.
-Expand the "Chart Options" and set the titles and labels as below.
-Restrict the x-axis to ``30 < a < 100`` au.  
+Enter "q/(1.0-e)" for the X-axis, and "e" for the y-axis. Increase the number of bins to 200 for both x and y to improve the resolution of the heatmap. Expand the "Chart Options" and set the titles and labels as below. Restrict the x-axis to ``30 < a < 100`` au.  
 
 <img src="images/portal_tut03_step02a.png" alt="A screenshot of the plot parameters for the eccentricity vs. semimajor axis plot." width="400"/>
 
