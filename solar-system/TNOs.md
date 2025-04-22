@@ -15,8 +15,7 @@ TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputn
 The DP0.3 simulated data set does not include the semimajor axis (``a``) in the ``MPCORB`` table, however it can be derived from the 
 orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 -``e``).  This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1). TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2. Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits. Such objects will be excluded from this demo, as an application of the formula above would result in a negative value of ``a``.  
 
-Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky. This relatively slow movement means that TNOs that fall within an LSST Deep Drilling Field (DDF) can stay within that field, and LSST can accumulate thousands of observations of those TNOs.
-This demo explores the position on the sky of one such TNO (Step 3) and plots time-domain quantities such as magnitude and phase angle (Step 4). Finally, it provides a visualization of its trajectory projected into 2D (see Step 5).  
+Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky.  
 
 More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
 and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
