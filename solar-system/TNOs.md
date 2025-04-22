@@ -25,7 +25,7 @@ This demo uses the Astronomy Data Query Language (ADQL), which is similar to SQL
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
 ### 1.2. At upper right, next to "View" choose "Edit ADQL".
-Enter the following ADQL statement into the ADQL Query box. It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a random subset of objects in the ``MPCORB`` table. For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables.
+Enter the following ADQL statement into the ADQL Query box. It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a random subset of objects in the ``MPCORB`` table. For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of [DP0.3 Portal tutorial 01](https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-1.html): "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables."
 
 ~~~~mysql 
 
