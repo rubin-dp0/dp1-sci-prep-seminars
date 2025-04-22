@@ -15,14 +15,9 @@ TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputn
 The DP0.3 simulated data set does not include the semimajor axis (``a``) in the ``MPCORB`` table, however it can be derived from the 
 orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 -``e``).  This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1). TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2. Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits. Such objects will be excluded from this demo, as an application of the formula above would result in a negative value of ``a``.  
 
-Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky.  
+Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky. 
 
-More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
-and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
-[PSTN-056](https://pstn-056.lsst.io/). Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
-
-This tutorial assumes the successful completion of Portal tutorial 01: Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables 
-and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`` tables, and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
+This demo uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
 
 ## Step 1. Identify a population of TNOs
 
