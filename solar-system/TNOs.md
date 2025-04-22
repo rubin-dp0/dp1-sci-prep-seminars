@@ -4,36 +4,20 @@
 
 **Contact authors:** Greg Madejski and Melissa Graham
 
-**Last verified to run:** March 27, 2025
+**Last verified to run:** April 22, 2025
 
 **Targeted learning level:** Intermediate
 
 ## Introduction
 
-This tutorial demonstrates how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
+This demo shows how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
 TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputne (``a`` > 30.1 AU).
 The DP0.3 simulated data set does not include the semimajor axis (``a``) in the ``MPCORB`` table, however it can be derived from the 
-orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 - ``e``). 
-This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1).  
-TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2.  
-Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits.  
-Such objects will be excluded from this tutorial, as an application of the formula above would result in a negative value of ``a``.  
+orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 -``e``).  This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1). TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2. Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits. Such objects will be excluded from this demo, as an application of the formula above would result in a negative value of ``a``.  
 
-Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky.
-This relatively slow movement means that TNOs that fall within an LSST Deep Drilling Field (DDF) can stay within that
-field, and LSST can accumulate thousands of observations of those TNOs.
-This tutorial explores the position on the sky of one such TNO (Step 3) and plots time-domain quantities such as magnitude and phase angle (Step 4).  
-Finally, it provides a visualization of its trajectory projected into 2D (see Step 5).  
+Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky. 
 
-More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
-and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
-[PSTN-056](https://pstn-056.lsst.io/).
-Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
-
-This tutorial assumes the successful completion of Portal tutorial 01: Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables 
-and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`` tables, 
-and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
-For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
+This demo uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the [DP0.3 Data Products Definition Document](https://dp0-3.lsst.io/data-products-dp0-3/index.html#dp0-3-data-products-definition-document-dpdd).
 
 ## Step 1. Identify a population of TNOs
 
@@ -41,11 +25,7 @@ For more information about the DP0.3 catalogs, tables, and columns, see the :ref
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
 ### 1.2. At upper right, next to "View" choose "Edit ADQL".
-Enter the following ADQL statement into the ADQL Query box.
-It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a
-random subset of objects in the ``MPCORB`` table.
-For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of
-DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables.
+Enter the following ADQL statement into the ADQL Query box. It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a random subset of objects in the ``MPCORB`` table. For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of [DP0.3 Portal tutorial 01](https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-1.html): "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables."
 
 ~~~~mysql 
 
@@ -67,8 +47,7 @@ Figure 1: The default results view for the query, with the table at right and th
 
 ### 1.5.  Exclude the objects moving on unbound orbits.  
 Note that a small fraction of the objects - roughly one in a thousand - have derived eccentricities > 1, which means they are not bound to the Solar System.  
-Those objects can be excluded from further analysis by entering ``< 1`` in the box underneath the table heading ``e``, and hitting "enter."  
-This will result in a slightly modified display as below.  
+Those objects can be excluded from further analysis by entering ``< 1`` in the box underneath the table heading ``e``, and hitting "enter." This will result in a slightly modified display as below.  
 
 <img src="images/portal_tut03_step01b.png" alt="A screenshot of the default results view for the modified query." width="600"/>
 
@@ -89,11 +68,7 @@ Figure 3: Screenshot showing the "Add a column" pop-up window.
 -->
 
 ### 1.7. Create a scatter plot of inclination vs. semimajor axis.
-In the plot panel, click on the "+" sign the upper left side.  
-This will bring up the "Add New Chart" pop-up window.  
-Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl".
-In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80.  
-Click "OK".
+In the plot panel, click on the "+" sign near upper left. This will bring up the "Add New Chart" pop-up window. Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl". In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80. Click "OK".
 
 <img src="images/portal_tut03_step01d.png" alt="A screenshot of the plot parameters pop-up window." width="400"/>
 
@@ -142,14 +117,10 @@ The default plot in the results view will be a heatmap of inclination vs. eccent
 
 ### 2.4.  Plot the eccentricity of the orbit ``e`` as a function of the semimajor axis ``a``.  
 This time (in contrast to Step 1.6 but accomplishing the same goal), calculate ``a`` from ``e`` and ``q`` via 
-setting appropriate plot parameters rather than creating another column in the right-hand table.  
-Start by clicking on the "+" sign on the left-hand panel to add a new chart.  
+setting appropriate plot parameters rather than creating another column in the right-hand table. Start by clicking on the "+" sign on the left-hand panel to add a new chart.  
 
 ### 2.5. In the "Add New Chart" pop-up window, select "Scatter" for the plot type.
-Enter "q/(1.0-e)" for the X-axis, and "e" for the y-axis.  
-Increase the number of bins to 200 for both x and y to improve the resolution of the heatmap.
-Expand the "Chart Options" and set the titles and labels as below.
-Restrict the x-axis to ``30 < a < 100`` au.  
+Enter "q/(1.0-e)" for the X-axis, and "e" for the y-axis. Expand the "Chart Options" and set the titles and labels as below. Restrict the x-axis to ``30 < a < 100`` au.  
 
 <img src="images/portal_tut03_step02a.png" alt="A screenshot of the plot parameters for the eccentricity vs. semimajor axis plot." width="400"/>
 
@@ -169,13 +140,13 @@ Figure 7: The plot of eccentricity vs. semimajor axis of transneptunian objects 
 ### 2.7. Multiple sub-populations are apparent in the above plot.
 The majority of the objects have low eccentricity (``e < 0.3``) and a semimajor axis of about 30 to about 50 au.
 There are several sub-populations of transneptunian objects, such as the classical, resonant, scattered-disk, and detached sub-populations.
-A full review of all TNO sub-populations is beyond the scope of this tutorial.
+A full review of all TNO sub-populations is beyond the scope of this demo.
 
 ### 2.8.  Estimate the diameters of the objects using their absolute H magnitudes. 
 Where ``H`` is the absolute H magnitude (column ``mpcH``), and ``A`` is the albedo, the diameter :math:`d` 
-in kilometers is :math:`d = 10^{(3.1236 - 0.5 \times log(A) - 0.2 \times H)}`.
-This tutorial adopts an albedo value of 0.15 (as is commonly adopted, e.g., [Vilenius et al. 2012](https://arxiv.org/pdf/1204.0697.pdf),
-with which the expression reduces to :math:`d = 10^{(3.536 - (0.2 \times H))}` km.  
+in kilometers is $d = 10^{(3.1236 - 0.5 \times log(A) - 0.2 \times H)}$.
+This demo adopts an albedo value of 0.15 (as is commonly adopted, e.g., [Vilenius et al. 2012](https://arxiv.org/pdf/1204.0697.pdf),
+with which the expression reduces to $d = 10^{(3.536 - (0.2 \times H))}$ km.  
 Click on the "add column" icon.
 Enter ``D`` in the "name" field, ``power(10,(3.536 - 0.2 * mpcH))`` in the expression field, "km" as the units, and "diameter" as the description as below.
 Click the "Add Column" button.  
@@ -206,7 +177,5 @@ Figure 10: The distribution of estimated diameters.
 
 ### 2.11. Notice that the tail of the distribution extends to very small diameters.
 This is surprising, as detecting kilometer-sized objects at the distance of Neptune 
-should be quite challenging.
-This illustrates, in part, some of the shortcomings of the assumptions (such as albedo)
-which were used to estimate the diameters.
-See also the first exercise for the learner in Step 6.
+should be quite challenging. This illustrates, in part, some of the shortcomings of the assumptions (such as albedo)
+which were used to estimate the diameters. See [DP0.3 portal tutorial 03](https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-3.html) for a continuation of this TNO exploration.
