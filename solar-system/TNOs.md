@@ -68,7 +68,7 @@ Figure 3: Screenshot showing the "Add a column" pop-up window.
 -->
 
 ### 1.7. Create a scatter plot of inclination vs. semimajor axis.
-In the plot panel, click on the "+" sign the upper left side. This will bring up the "Add New Chart" pop-up window. Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl". In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80. Click "OK".
+In the plot panel, click on the "+" sign near upper left. This will bring up the "Add New Chart" pop-up window. Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl". In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80. Click "OK".
 
 <img src="images/portal_tut03_step01d.png" alt="A screenshot of the plot parameters pop-up window." width="400"/>
 
