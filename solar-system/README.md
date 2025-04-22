@@ -6,7 +6,7 @@ Sarah Greenstreet, Aaron Meisner
 
 ## Slides
 
-(link to be added here)
+View the [slide deck](https://docs.google.com/presentation/d/1R91mS7hJBoSeCa3OGen_zrHfdL06g_YPfGFBqIMpk30/edit?usp=sharing).
 
 ## Tutorial
 
