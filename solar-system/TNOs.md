@@ -144,7 +144,7 @@ A full review of all TNO sub-populations is beyond the scope of this demo.
 
 ### 2.8.  Estimate the diameters of the objects using their absolute H magnitudes. 
 Where ``H`` is the absolute H magnitude (column ``mpcH``), and ``A`` is the albedo, the diameter :math:`d` 
-in kilometers is :math:`d = 10^{(3.1236 - 0.5 \times log(A) - 0.2 \times H)}`.
+in kilometers is $d = 10^{(3.1236 - 0.5 \times log(A) - 0.2 \times H)}$.
 This demo adopts an albedo value of 0.15 (as is commonly adopted, e.g., [Vilenius et al. 2012](https://arxiv.org/pdf/1204.0697.pdf),
 with which the expression reduces to :math:`d = 10^{(3.536 - (0.2 \times H))}` km.  
 Click on the "add column" icon.
