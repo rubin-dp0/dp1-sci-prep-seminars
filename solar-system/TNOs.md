@@ -13,27 +13,17 @@
 This demo shows how to identify and explore a population of transneptunian objects (TNOs) in the simulated DP0.3 catalogs.
 TNOs are defined by having orbits with semimajor axes beyond the orbit of Neputne (``a`` > 30.1 AU).
 The DP0.3 simulated data set does not include the semimajor axis (``a``) in the ``MPCORB`` table, however it can be derived from the 
-orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 - ``e``). 
-This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1).  
-TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2.  
-Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits.  
-Such objects will be excluded from this tutorial, as an application of the formula above would result in a negative value of ``a``.  
+orbit's eccentricity (``e``) and perihelion distance (``q``), which are both available in the ``MPCORB`` table, via ``a`` = ``q``/(1.0 - ``e``).  This allows for a sample of TNOs to be identified in the DP0.3 data set (see Step 1). TNO properties (specifically, the relationship between their semimajor axis and eccentricity, as well as the distribution of their derived diameters) will be explored in Step 2. Note that some of the objects might have ``e`` >= 1, which means they are not bound to the Solar System and are moving on parabolic or hyperbolic orbits. Such objects will be excluded from this tutorial, as an application of the formula above would result in a negative value of ``a``.  
 
-Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky.
-This relatively slow movement means that TNOs that fall within an LSST Deep Drilling Field (DDF) can stay within that
-field, and LSST can accumulate thousands of observations of those TNOs.
-This tutorial explores the position on the sky of one such TNO (Step 3) and plots time-domain quantities such as magnitude and phase angle (Step 4).  
-Finally, it provides a visualization of its trajectory projected into 2D (see Step 5).  
+Compared to the Solar System objects closer to the Earth, such as Main Belt Asteroids or Near-Earth Objects (NEOs), TNOs move relatively slowly across the sky. This relatively slow movement means that TNOs that fall within an LSST Deep Drilling Field (DDF) can stay within that field, and LSST can accumulate thousands of observations of those TNOs.
+This tutorial explores the position on the sky of one such TNO (Step 3) and plots time-domain quantities such as magnitude and phase angle (Step 4). Finally, it provides a visualization of its trajectory projected into 2D (see Step 5).  
 
 More information about the LSST DDFs can be found on the [LSST DDF webpage](https://www.lsst.org/scientists/survey-design/ddf>)
 and in Section 3.7 of the Survey Cadence Optimization Committee's Phase 3 Recommendations report 
-[PSTN-056](https://pstn-056.lsst.io/).
-Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
+[PSTN-056](https://pstn-056.lsst.io/). Note that DP0.2 did not include DDF observations, so the ability to explore science with a DDF-like cadence is unique to the DP0.3 simulation.
 
 This tutorial assumes the successful completion of Portal tutorial 01: Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables 
-and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`` tables, 
-and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language).
-For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
+and Portal tutorial 02: Introduction to DP0.3: the ``SSSource`` and ``DiaSource`` tables, and uses the Astronomy Data Query Language (ADQL), which is similar to SQL (Structured Query Language). For more information about the DP0.3 catalogs, tables, and columns, see the :ref:`DP0-3-Data-Products-DPDD`.  
 
 ## Step 1. Identify a population of TNOs
 
@@ -41,11 +31,7 @@ For more information about the DP0.3 catalogs, tables, and columns, see the :ref
 Click on "DP0.3 Catalogs" tab to get to the "dp03_catalogs_10yr" table collection.  
 
 ### 1.2. At upper right, next to "View" choose "Edit ADQL".
-Enter the following ADQL statement into the ADQL Query box.
-It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a
-random subset of objects in the ``MPCORB`` table.
-For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of
-DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables.
+Enter the following ADQL statement into the ADQL Query box. It will return the eccentricity (``e``), perihelion distance (``q``), and inclination (``incl``) for a random subset of objects in the ``MPCORB`` table. For an explanation of why this constraint on ``ssObjectId`` returns a random sample, see Step 2 of DP0.3 Portal tutorial 01: "Introduction to DP0.3: the ``MPCORB`` and ``SSObject`` tables.
 
 ~~~~mysql 
 
