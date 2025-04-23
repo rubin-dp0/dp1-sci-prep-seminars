@@ -97,7 +97,7 @@ In the next step, a revised query will be used to only retrieve objects with sem
 ### 2.1.  Now isolate the population of transneptunian objects and further explore their properties.  
 To study the properties of a larger sample of TNOs, return to the ADQL query interface by clicking on "DP0.3 Catalogs" tab, and clicking on "Edit ADQL" button.  
 
-### 2.2.  Clear the ADQL query, and execute the query below, which is simiar to the one in Step 1.2 but includes only objects at ``a`` > 30.1 au.
+### 2.2.  Clear the ADQL query, and execute the query below, which is similar to the one in Step 1.2 but includes only objects at ``a`` > 30.1 au.
 Also include the absolute H magnitude ``mpcH`` which will be used in the derivation of TNO diameters in the subsequent step (2.6) below.
 As TNOs aren't the only solar system objects beyond Neptune, reject objects with `mpcDesignation` as
 Long Period Comets (LPC).
