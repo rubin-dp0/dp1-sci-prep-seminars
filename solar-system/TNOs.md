@@ -4,8 +4,6 @@
 
 **Last verified to run:** April 23, 2025
 
-**Targeted learning level:** Intermediate
-
 Credit: Based on tutorials developed by the Rubin Community Science team, in particular DP0.3 portal tutorial 03 originally authored by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 ## Introduction
