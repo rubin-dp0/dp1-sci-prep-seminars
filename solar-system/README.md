@@ -19,7 +19,7 @@ View the [slide deck](https://docs.google.com/presentation/d/1R91mS7hJBoSeCa3OGe
 
 ### Portal demo
 
-`TNOs.md` is this assembly's portal demo, based on [DP0.3 portal tutorial 03](https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-3.html) originally authored by Greg Madejski and Melissa Graham.
+`trans_Neptunian_objects.md` is this assembly's portal demo, based on [DP0.3 portal tutorial 03](https://dp0-3.lsst.io/tutorials-dp0-3/portal-dp0-3-3.html) originally authored by Greg Madejski and Melissa Graham.
 
 - issue ADQL queries
 - create derived columns based on query outputs
