@@ -1,10 +1,18 @@
 # Explore Transneptunian Objects (TNOs) in DP0.3
 
-**RSP Aspect:** Portal
+For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
-**Last verified to run:** April 23, 2025
+**Data Release:** DP0.3
 
-Credit: Based on tutorials developed by the Rubin Community Science team, in particular DP0.3 portal tutorial 03 originally authored by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Last verified to run:** 2025-04-23
+
+**Learning objective**: Identify and visualize trans-Neptunian populations in DP0.3 using the RSP Portal.
+
+**LSST Data Products**: DP0.3 `MPCORB` table
+
+**Credit:** Based on tutorials developed by the Rubin Community Science team, in particular DP0.3 portal tutorial 03 originally authored by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the [Support Category](https://community.lsst.org/c/support/6) of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
