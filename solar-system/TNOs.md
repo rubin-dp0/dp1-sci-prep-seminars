@@ -2,9 +2,7 @@
 
 **RSP Aspect:** Portal
 
-**Contact authors:** Greg Madejski and Melissa Graham
-
-**Last verified to run:** April 22, 2025
+**Last verified to run:** April 23, 2025
 
 **Targeted learning level:** Intermediate
 
