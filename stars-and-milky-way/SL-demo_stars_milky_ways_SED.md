@@ -119,11 +119,11 @@ Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then
 
 <img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="500"/>
 
-Figure 1: Modify plot - parameters for u-band.
+Figure 2: Modify plot - parameters for u-band.
 
 ### 2.2. Results from altering the plot - u-band filter magnitudes for 5 stars.
 
-As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 5, that only the u-band values are plotted
+As mentioned earlier, plotting the data from this ADQL query requires a few extra steps. Notice in Figure 3, that only the u-band values are plotted
 and the dots are the same color.  
 
 <img src="images/SED_uband_5_stars_pre_rainbow.PNG" alt="U band results prior to rainbow colors." width="700"/>
