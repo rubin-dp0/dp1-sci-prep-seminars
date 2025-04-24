@@ -39,9 +39,7 @@ Enter the following ADQL statement into the ADQL Query box. It will return the e
 
 <img src="images/portal_tut03_step01a.png" alt="A screenshot of the default results view for the query." width="600"/>
 
-<!---
-Figure 1: The default results view for the query, with the table at right and the heatmap at left.
--->
+*Figure 1: The default results view for the query, with the table at right and the heatmap at left.*
 
 ### 1.5.  Exclude the objects moving on unbound orbits.  
 Note that a small fraction of the objects - roughly one in a thousand - have derived eccentricities > 1, which means they are not bound to the Solar System.  
@@ -49,9 +47,7 @@ Those objects can be excluded from further analysis by entering ``< 1`` in the b
 
 <img src="images/portal_tut03_step01b.png" alt="A screenshot of the default results view for the modified query." width="600"/>
 
-<!---
-Figure 2: The view for the query with ``e < 1``. 
--->
+*Figure 2: The view for the query with ``e < 1``.*
 
 ### 1.6. Create a new column in the table, containing semimajor axis, ``a``.
 In the upper right column of the table panel, click on the icon to add a column (a tall narrow rectangle to the left of a + sign).
@@ -61,27 +57,21 @@ Click "Add Column", and see the new column appear in the table.
 
 <img src="images/portal_tut03_step01c.png" alt="A screenshot of the pop-up window to add a column." width="400"/>
 
-<!---
-Figure 3: Screenshot showing the "Add a column" pop-up window.
--->
+*Figure 3: Screenshot showing the "Add a column" pop-up window.*
 
 ### 1.7. Create a scatter plot of inclination vs. semimajor axis.
 In the plot panel, click on the "+" sign near upper left. This will bring up the "Add New Chart" pop-up window. Set the "Plot Type" to "Scatter", the "X" to "a", "Y" to "incl". In the "Chart Options" dropdown menu, set the "X Min" to "0", the "X Max" to 60, the "Y Min" to 0, and the "Y Max" to 80. Click "OK".
 
 <img src="images/portal_tut03_step01d.png" alt="A screenshot of the plot parameters pop-up window." width="400"/>
 
-<!---
-Figure 4: Screenshot showing how to create a new plot with these parameters.
--->
+*Figure 4: Screenshot showing how to create a new plot with these parameters.*
 
 ### 1.8. Delete the default plot by clicking on the blue cross in the upper right corner, so that only the newly-created plot appears (it should look like the plot below).
 TNOs appear as a distinct population with ``a`` > 30.1 au in this parameter space.
 
 <img src="images/portal_tut03_step01e.png" alt="A screenshot of the inclination versus semimajor axis plot, showing a clear population of TNOs." width="600"/>
 
-<!---
-Figure 5: The population of TNOs has x-values greater than 30 au.
--->
+*Figure 5: The population of TNOs has x-values greater than 30 au.*
 
 ### 1.9.  Notice that in the plot above, the majority of objects returned by the query have semimajor axes less than 30.1 au.  
 In fact, only about 800 of the moving objects from the query were TNOs.
@@ -122,18 +112,14 @@ Enter "q/(1.0-e)" for the X-axis, and "e" for the y-axis. Expand the "Chart Opti
 
 <img src="images/portal_tut03_step02a.png" alt="A screenshot of the plot parameters for the eccentricity vs. semimajor axis plot." width="400"/>
 
-<!---
-Figure 6: The plot parameters for the eccentricity vs. semimajor axis plot.
--->
+*Figure 6: The plot parameters for the eccentricity vs. semimajor axis plot.*
 
 ### 2.6.  Click on the "OK" button in the "Add New Chart" window, and view the plot (see below).
 Delete the default plot of inclination vs. eccentricity as it is not needed.
 
 <img src="images/portal_tut03_step02b.png" alt="A screenshot of the plot of the eccentricity vs. semimajor axis." width="600"/>
 
-<!---
-Figure 7: The plot of eccentricity vs. semimajor axis of transneptunian objects (TNOs).
--->
+*Figure 7: The plot of eccentricity vs. semimajor axis of trans-Neptunian objects (TNOs).*
 
 ### 2.7. Multiple sub-populations are apparent in the above plot.
 The majority of the objects have low eccentricity (``e < 0.3``) and a semimajor axis of about 30 to about 50 au.
@@ -151,27 +137,21 @@ Click the "Add Column" button.
 
 <img src="images/portal_tut03_step02c.png" alt="Screenshot illustrating the expression needed to make the new column containing the diameter" width="400"/>
 
-<!---
-Figure 8: How to add a new column containing the estimated diameter. 
--->
+*Figure 8: How to add a new column containing the estimated diameter.*
 
 ### 2.9.  Plot the distribution of estimated diameters in log-space.
 Click on the "+" sign in the pop-up window, click on "Add New Chart," select "Histogram", and enter the parameters as below.  
 
 <img src="images/portal_tut03_step02d.png" alt="screenshot illustrating the plot parameters for displaying the distribution of estimated diameters" width="400"/>
 
-<!---
-Figure 9: The plot parameters for the distribution of estimated diameters. 
--->
+*Figure 9: The plot parameters for the distribution of estimated diameters.*
 
 ### 2.10.  Click on the "OK" button.
 This will result in the plot showing the distribution of estimated diameters.  
 
 <img src="images/portal_tut03_step02e.png" alt="screenshot illustrating the distribution of estimated diameters" width="600"/>
 
-<!---
-Figure 10: The distribution of estimated diameters. 
--->
+*Figure 10: The distribution of estimated diameters.*
 
 ### 2.11. Notice that the tail of the distribution extends to very small diameters.
 This is surprising, as detecting kilometer-sized objects at the distance of Neptune 
