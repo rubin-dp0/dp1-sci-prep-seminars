@@ -133,7 +133,7 @@ Figure 3: Results of u-band.
 
 ### 2.3. Distinguish between stars with rainbow color scale
 In order to distinguish one star from another, 'Trace Options' will need to be altered in the 'Plot Parameters' window. Click on the gear icon, notice the top selection is 'Modify Trace'. 
-Figure 5 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
+Figure 4 shows the required changes.  First, click on 'Trace Options' to open the input space. Click in 'Color Map' and select 'g_calibFlux'. 
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. 
 
