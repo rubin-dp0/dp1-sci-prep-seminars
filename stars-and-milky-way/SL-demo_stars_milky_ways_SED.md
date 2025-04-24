@@ -114,7 +114,7 @@ and plot SED for five stars.
 
 ### 2.1. Click on the gear icon.
 
-Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 3, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
+Click the gear icon in the right hand panel to alter the plot. Change the parameters as shown in Figure 2, change X to 'u_wave', Y to 'u_calibFlux'. Add a title 'SED for 5 stars'.
 Label the x-axis 'filter wavelength' and y-axis 'Flux (nJy)'. Click 'Apply' then 'Close'.
 
 <img src="images/SED_uband_plot_parameters.PNG" alt="Results of ADQL query." width="500"/>
