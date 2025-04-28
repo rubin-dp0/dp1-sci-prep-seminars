@@ -174,12 +174,12 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
 
 Follow the instructions from section 3, but change the x-axis to color_ug and y-axis to color_gr.
 
-<img src="images/CMD.PNG" alt="Change plot." width="600"/>
+<img src="images/CCD_plot_selection.PNG" alt="Change plot." width="400"/>
 
 Figure 7: Color-color diagram plot parameters.
 
 ### 4.1. Results.
 
-<img src="images/CMD.PNG" alt="Change plot." width="600"/>
+<img src="images/CCD_results.PNG" alt="Change plot." width="600"/>
 
 Figure 8: Color-color diagram.
