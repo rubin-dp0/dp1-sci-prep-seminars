@@ -17,13 +17,13 @@ Rubin staff will respond to all questions posted there.
 
 ## Introduction
 
- This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram. 
+ This tutorial uses an ADQL query to search for bright stars in a small region of sky, and then uses the Results interface to create a color-magnitude diagram and a color-color diagram. 
  This tutorial is similar to the 01. Bright Stars Color-Magnitude Diagram (beginner) portal tutorial in dp0-2 documentation. Please consult that tutorial if this tutorial is challenging. 
 
 **Data Preview 0.2 vs. Data Preview 1**
 
 In the Data Preview 0.2 (DP0.2) simulation stars are quantized unlike the real data to be released as Data Preview 1 (DP1).
-Studying CMD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
+Studying CMD and CCD to identify stellar populations within the DP0.2 dataset is still possible as the techniques used are similar.
 However, for DP1 the exact types of measurements and their column names are likely to be different, compared to DP0.
 The LSST Science Pipelines have evolved considerably since being run on the DP0.2 simulation. 
 
