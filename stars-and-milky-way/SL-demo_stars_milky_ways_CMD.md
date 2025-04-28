@@ -162,8 +162,8 @@ SELECT objectId, coord_ra, coord_dec, detect_isPrimary, g_calibFlux, g_extendedn
 FROM dp02_dc2_catalogs.Object
 WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
       AND detect_isPrimary = 1
-	     AND u_calibFlux > 360
-	     AND u_extendedness = 0
+      AND u_calibFlux > 360
+      AND u_extendedness = 0
       AND g_calibFlux > 360
       AND g_extendedness = 0
       AND r_calibFlux > 360
