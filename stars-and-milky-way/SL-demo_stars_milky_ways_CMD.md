@@ -152,7 +152,7 @@ Figure 6: Quantized CMD plot from dp0-2 simulation data.
 Create a color-color diagram for source classification and determination of detailed stellar properties (Ivezic et al. 2019) using dp0-2 simiulated data. 
 
 ### 4.1. Execute the ADQL query.
-Follow the steps outlined in Section 1 but substitute the following for the ADQL query which calculates colors u-g and g-r and adds additional results columns. 
+Follow the steps outlined in Section 1 but substitute the following ADQL query which calculates colors u-g and g-r and adds columns to the results table. 
 Performing the ADQL query in this manner simplifies plotting. 
 
 ~~~~mysql
