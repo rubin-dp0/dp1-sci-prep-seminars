@@ -168,7 +168,7 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
       AND g_extendedness = 0
       AND r_calibFlux > 360
       AND r_extendedness = 0
-~~~
+~~~~
 
 ## 4.2. Plot color vs. color.
 
