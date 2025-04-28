@@ -143,7 +143,7 @@ Figure 5: Parameters to alter the plot.
 Data Preview 0.2 0.1 Bright Stars color magnitude diagram (beginner) portal tutorial will provide a similar CMD. Use that tutorial get step-by-step
 instructions to create the plot. Use or alter the ADQL query in this tutorial to get a quick look at a CMD.
 
-<img src="images/CMD.PNG" alt="Change plot." width="600"/>
+<img src="images/CMD.PNG" alt="CMD results." width="600"/>
 
 Figure 6: Quantized CMD plot from dp0-2 simulation data.
 
@@ -174,12 +174,12 @@ WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) =
 
 Follow the instructions from section 3, but change the x-axis to color_ug and y-axis to color_gr.
 
-<img src="images/CCD_plot_selection.PNG" alt="Change plot." width="400"/>
+<img src="images/CCD_plot_selection.PNG" alt="CCD plot parameters." width="400"/>
 
 Figure 7: Color-color diagram plot parameters.
 
 ### 4.1. Results.
 
-<img src="images/CCD_results.PNG" alt="Change plot." width="600"/>
+<img src="images/CCD_results.PNG" alt="Color-color diagram." width="600"/>
 
 Figure 8: Color-color diagram.
