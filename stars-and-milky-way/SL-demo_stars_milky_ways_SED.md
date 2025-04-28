@@ -137,7 +137,7 @@ Figure 4 shows the required changes.  First, click on 'Trace Options' to open th
 Using 'g_calibFlux' for each of the subsequent filter bands will provide the proper colors of the stars. Next, click the 'Color Scale' down arrow and select
 'Rainbow'. Click 'Apply' then 'Close'.
 
-<img src="images/SED_parameters_uband_rainbow.PNG" alt="Rainbow colors to distinguish stars." width="700"/>
+<img src="images/SED_parameters_uband_rainbow.PNG" alt="Rainbow colors to distinguish stars." width="500"/>
 
 Figure 4: Change u-band information to rainbow to distinguish stars.
 
@@ -169,6 +169,6 @@ Figure 7: u- and g-band values for 5 stars plotted against u- and g- filter wave
 Continue in the same fashion to add the remaining filter bands.
 
 
-<img src="images/SED_allbands.PNG" alt="Search drop down." width="700"/>
+<img src="images/SED_allbands.PNG" alt="SED for 5 stars all bands." width="700"/>
 
 Figure 8: Sample photometric SED for 5 stars.
