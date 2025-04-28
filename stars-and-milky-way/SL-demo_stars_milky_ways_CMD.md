@@ -1,4 +1,4 @@
-# Stars and Milky Way CMD Demo
+# Stars and Milky Way CMD and CCD Demo
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -6,7 +6,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-04-14
 
-**Learning objective:** Use the ADQL interface to query for stars and generate a Color Magnitude Diagram.
+**Learning objective:** Use the ADQL interface to query for stars and generate a Color Magnitude Diagram and a Color-Color Diagram.
 
 **LSST data products:** `Object` catalog
 
@@ -30,7 +30,7 @@ The LSST Science Pipelines have evolved considerably since being run on the DP0.
 **Related tutorials relevant to stellar science.**
 See also the DP0.2 portal tutorials on plotting histograms, light curves, extracting pixel values, and the SAOImage DS9-like functionalities of Firefly.
 
-## 1. Execute the ADQL query.
+## 1. Color-Magnitude Diagram ADQL query.
 
 ### 1.1. Log in to the RSP Portal.
 
@@ -147,4 +147,39 @@ instructions to create the plot. Use or alter the ADQL query in this tutorial to
 
 Figure 6: Quantized CMD plot from dp0-2 simulation data.
 
+## 4. Color-Color Diagram ADQL query.
 
+Investigate a color-color diagram using dp0-2 simiulated data. 
+
+### 4.1. Execute the ADQL query.
+Follow the steps outlined in Section 1 but substitute the following for the ADQL query which calculates colors u-g and g-r and adds additional results columns. 
+Performing the ADQL query in this manner simplifies plotting. 
+
+~~~~mysql
+SELECT objectId, coord_ra, coord_dec, detect_isPrimary, g_calibFlux, g_extendedness, i_calibFlux, i_extendedness, r_calibFlux, r_extendedness,
+      (-2.5 * LOG10(u_calibFlux) - (-2.5 * LOG10(g_calibFlux))) AS color_ug,
+      (-2.5 * LOG10(g_calibFlux) - (-2.5 * LOG10(r_calibFlux))) AS color_gr
+FROM dp02_dc2_catalogs.Object
+WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 62, -37, 1)) = 1
+      AND detect_isPrimary = 1
+	     AND u_calibFlux > 360
+	     AND u_extendedness = 0
+      AND g_calibFlux > 360
+      AND g_extendedness = 0
+      AND r_calibFlux > 360
+      AND r_extendedness = 0
+~~~
+
+## 4.2. Plot color vs. color.
+
+Follow the instructions from section 3, but change the x-axis to color_ug and y-axis to color_gr.
+
+<img src="images/CMD.PNG" alt="Change plot." width="600"/>
+
+Figure 7: Color-color diagram plot parameters.
+
+### 4.1. Results.
+
+<img src="images/CMD.PNG" alt="Change plot." width="600"/>
+
+Figure 8: Color-color diagram.
