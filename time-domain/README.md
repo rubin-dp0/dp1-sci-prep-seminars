@@ -7,6 +7,7 @@ Ryan Lau, Jeff Carlin
 ## Slides
 
 [slide deck](https://docs.google.com/presentation/d/1lmPyC9gaYqPzZlU9GUb0-5Gw8j54vGRwukANL1D5Dj4/edit?usp=sharing) (read only)
+[slide deck for 12 May 2025 Science Seminar](https://docs.google.com/presentation/d/1pPvUeQ4ljMOSrG7NeZWC9Gu_tGfyhTRzzllkx3EZWzs/edit?usp=sharing) (read only)
 
 ## Tutorial
 
